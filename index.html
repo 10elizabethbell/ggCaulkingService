@@ -25,7 +25,7 @@
   --ink-2:#414b57;
   --paint:#ff5b14;       /* layout marking paint */
   --paint-ink:#963003;   /* paint dark enough for text on concrete */
-  --chalk:#2b6fd6;       /* chalk-line blue: form hover/focus */
+  --chalk:#163f8a;       /* chalk-line blue: form hover/focus */
   --groove:#4f4b44;
   --sealant:#7f8286;
   --night:#16233a;
@@ -37,7 +37,7 @@
 
 /* ---------- Base ---------- */
 *,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;overscroll-behavior-y:none}
+html{background:var(--ink);-webkit-text-size-adjust:100%;scroll-behavior:smooth;overscroll-behavior-y:none}
 body{margin:0;font-family:var(--font);font-size:17px;line-height:1.55;color:var(--ink);background:var(--slab) var(--noise);-webkit-font-smoothing:antialiased}
 ::selection{background:var(--paint);color:var(--ink)}
 a{color:inherit}
@@ -48,7 +48,7 @@ p{margin:0}
 .wrap{width:min(1180px,100% - 32px);margin-inline:auto}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 :focus-visible{outline:3px solid var(--chalk);outline-offset:3px}
-section{padding:64px 0 72px}
+section{padding:72px 0 72px}
 
 /* ---------- Header ---------- */
 .top{position:absolute;inset:0 0 auto;z-index:3;padding:14px 0}
@@ -58,11 +58,10 @@ section{padding:64px 0 72px}
 .mark span{font-size:15px}
 .mark small{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--ink-2);margin-top:3px}
 .phone{font-weight:800;font-size:15px;text-decoration:none;min-height:44px;display:flex;align-items:center;white-space:nowrap}
-a.phone:hover{color:var(--paint-ink)}
-.phone.soon{font-weight:700;font-size:13px;color:var(--ink-2)}
+.phone.soon{font-weight:800;font-size:14px;color:var(--ink-2)}
 
 /* ---------- Hero ---------- */
-.hero{position:relative;min-height:clamp(620px,100svh,980px);padding:96px 0 0;overflow:hidden;background:var(--slab)}
+.hero{position:relative;min-height:clamp(620px,100svh,980px);padding:96px 0 0;overflow:hidden;background:var(--slab) var(--noise)}
 .hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
 .hero-copy{position:relative;z-index:2;max-width:640px}
 .hero h1{font-size:clamp(2.9rem,13.2vw,6rem);line-height:.9;letter-spacing:-.035em}
@@ -72,9 +71,7 @@ a.phone:hover{color:var(--paint-ink)}
 .btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 22px;border-radius:12px;font:inherit;font-weight:800;font-size:17px;text-decoration:none;cursor:pointer;border:2px solid var(--ink);transition:transform .15s,background-color .2s,color .2s}
 .btn:active{transform:translateY(1px)}
 .btn-fill{background:var(--paint);color:var(--ink);box-shadow:0 8px 18px -10px rgba(179,58,6,.8)}
-.btn-fill:hover{background:#ff7034}
 .btn-line{background:transparent;color:var(--ink)}
-.btn-line:hover{background:rgba(31,39,49,.08)}
 .btn svg{width:20px;height:20px;flex:none}
 .hint{position:absolute;z-index:2;left:0;right:0;bottom:14px;text-align:center;font-size:15px;font-weight:700;color:var(--ink-2);pointer-events:none;opacity:.85;transition:opacity .6s}
 .hint.gone{opacity:0}
@@ -87,26 +84,26 @@ a.phone:hover{color:var(--paint-ink)}
 .seam.to-paint{--b:var(--paint)}
 
 /* ---------- Work ---------- */
-.work .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;background:var(--groove);padding:0;border-radius:6px;position:relative}
-.work .grid{background:linear-gradient(90deg,var(--sealant) var(--fill,0%),var(--groove) var(--fill,0%))}
-.work figure{margin:0;background:var(--slab-2);overflow:hidden;border-radius:4px;position:relative}
+.work .grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;background:#74777b;border-radius:2px;position:relative} /* the gaps are sealed joints */
+.work figure{margin:0;background:var(--slab-2);overflow:hidden;border-radius:1px;position:relative}
 .work figure img{width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s}
 .work figure img.in{opacity:1}
-.work .tall{grid-row:span 2;aspect-ratio:1/2}
+.work .tall{grid-row:span 2;aspect-ratio:auto}
 .work .sq{aspect-ratio:3/4}
 .work .wide{grid-column:1/-1;aspect-ratio:4/3}
 .more{display:flex;align-items:center;gap:14px;margin-top:22px;padding:16px 18px;min-height:64px;border-radius:12px;background:var(--ink);color:var(--white);text-decoration:none;font-weight:800;font-size:18px;box-shadow:0 14px 26px -16px rgba(31,39,49,.8)}
 .more .fb{width:30px;height:30px;flex:none}
-.more .txt{flex:1}
+.more .txt{flex:1;text-wrap:balance;line-height:1.25}
 .arrow{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:rgba(251,250,247,.14);flex:none;transition:background-color .2s,color .2s}
 .arrow svg{width:18px;height:18px}
-.more:hover .arrow,.more:focus-visible .arrow{background:var(--paint);color:var(--ink)}
+.more:focus-visible .arrow{background:var(--paint);color:var(--ink)}
 .more:focus-visible{outline:none}
 .more:focus-visible .arrow{outline:3px solid var(--paint);outline-offset:3px}
 
 /* ---------- Night / 24-7 ---------- */
 .night{background:var(--night);color:var(--white)}
 .night .cols{display:grid;gap:26px}
+.night .cols>div{order:-1}
 .night figure{margin:0;border-radius:6px;overflow:hidden;background:var(--night-2);aspect-ratio:9/11;box-shadow:0 26px 50px -26px rgba(0,0,0,.7)}
 .night figure img{width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s}
 .night figure img.in{opacity:1}
@@ -129,7 +126,7 @@ a.phone:hover{color:var(--paint-ink)}
 form{display:grid;gap:16px;max-width:640px}
 .field{display:grid;gap:6px}
 label,.legend{font-weight:800;font-size:15px}
-.opt{font-weight:600;color:#4a2410}
+.opt{font-weight:600;color:#38190a}
 input[type=text],input[type=tel],textarea{width:100%;font:inherit;font-size:17px;color:var(--ink);background:var(--white);border:2px solid var(--ink);border-radius:10px;padding:13px 14px;min-height:52px;transition:outline-color .15s}
 textarea{min-height:110px;resize:vertical}
 input::placeholder,textarea::placeholder{color:#6b6f75}
@@ -147,6 +144,7 @@ fieldset{border:0;margin:0;padding:0}
 .result{display:none;margin-top:6px;padding:18px;border-radius:12px;background:var(--white);border:2px solid var(--ink);max-width:640px}
 .result.show{display:block}
 .result h3{font-size:22px;margin-bottom:8px}
+.result h3:focus{outline:none}
 .result p{margin-bottom:12px}
 .result textarea{min-height:150px;font-size:16px;background:#f2f0ea}
 .result .row{display:grid;gap:10px;margin-top:12px}
@@ -158,26 +156,37 @@ footer{background:var(--ink);color:#e7e9ed;padding:40px 0 calc(40px + env(safe-a
 footer .name{font-weight:900;text-transform:uppercase;font-size:20px;line-height:1.1}
 footer ul{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:6px}
 footer a{display:inline-flex;align-items:center;min-height:44px;text-decoration-color:rgba(255,255,255,.35);text-underline-offset:4px}
-footer a:hover{color:var(--paint)}
+footer :focus-visible{outline-color:var(--paint)}
 footer .soon{color:#aab2bd}
 footer .fine{margin-top:20px;font-size:14px;color:#aab2bd}
+
+/* Hover colours only where there is a real hover (so they don't stick after a tap) */
+@media (hover:hover){
+  a.phone:hover{color:var(--paint-ink)}
+  .btn-fill:hover{background:#ff7034}
+  .btn-line:hover{background:rgba(31,39,49,.08)}
+  .more:hover .arrow{background:var(--paint);color:var(--ink)}
+  footer a:hover{color:var(--paint)}
+}
 
 /* ---------- Desktop ---------- */
 @media (min-width:760px){
   .btns{grid-template-columns:auto auto;justify-content:start}
   .mark span{font-size:17px}
   .phone{font-size:18px}
-  .work .grid{grid-template-columns:repeat(3,1fr);gap:12px}
-  .work .tall{grid-row:span 2;aspect-ratio:auto}
+  .work .grid{grid-template-columns:repeat(3,1fr);gap:9px}
   .work .sq{aspect-ratio:3/4}
   .work .wide{grid-column:span 2;aspect-ratio:auto}
   .more{display:inline-flex;padding-right:14px}
+  .night figure{max-width:520px;aspect-ratio:4/3}
 }
 @media (min-width:1024px){
   section{padding:96px 0 104px}
   .hero{padding-top:120px}
   .hero-copy{max-width:600px}
   .night .cols{grid-template-columns:5fr 6fr;align-items:center;gap:64px}
+  .night .cols>div{order:0}
+  .night figure{max-width:none}
   .steps ol{grid-template-columns:repeat(3,1fr);gap:28px}
   .steps li:last-child{border-bottom:0}
   .estimate .wrap{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
@@ -198,7 +207,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <header class="top">
   <div class="wrap">
     <a class="mark" href="#top" aria-label="G&amp;G Caulking Service LLC, top of page"><b>G&amp;G</b><span>Caulking<small>Service LLC</small></span></a>
-    <span class="phone soon" data-phone>Phone coming soon</span>
+    <span class="phone soon" data-phone>Open 24/7</span>
   </div>
 </header>
 
@@ -208,7 +217,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div class="wrap">
       <div class="hero-copy" id="heroCopy">
         <h1>Every joint, <em>sealed.</em></h1>
-        <p class="promise">We work 24/7, so the job gets done when it suits you. Tell us what needs sealing and we'll give you a free estimate.</p>
+        <p class="promise">We work 24/7, around your schedule, not ours. Every joint gets filled like it's on our own lot.</p>
         <div class="btns">
           <a class="btn btn-fill" href="#estimate">Get a free estimate</a>
           <a class="btn btn-line" data-fb href="https://www.facebook.com/profile.php?id=100034139794307" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1z"/></svg>Message us on Facebook</a>
@@ -245,7 +254,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <div>
         <h2>Day or night. <em>24/7.</em></h2>
         <p>Your lot can't close for a day while we work. So we come when it's empty: overnight, before you open, or on a weekend.</p>
-        <p>We treat your property like our own: every joint filled clean, and the site left the way we found it.</p>
+        <p>We treat your property like our own: every joint filled clean, and the site left clean.</p>
       </div>
     </div>
   </section>
@@ -256,7 +265,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div class="wrap">
       <h2>How it works</h2>
       <ol>
-        <li><span class="n">1</span><h3>Tell us about the job</h3><p>Fill in the form below or message us on Facebook. Photos of the joints help.</p></li>
+        <li><span class="n">1</span><h3>Tell us about the job</h3><p>Fill in the form below. Have photos of the joints? Send them to us on Facebook.</p></li>
         <li><span class="n">2</span><h3>Free estimate</h3><p>We look at the job and tell you what it will take. No charge.</p></li>
         <li><span class="n">3</span><h3>Sealed</h3><p>We fill every joint, at whatever hour suits you.</p></li>
       </ol>
@@ -269,14 +278,14 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div class="wrap">
       <div>
         <h2>Get a free estimate</h2>
-        <p class="lead">Tell us where and what. We'll get back to you with a free estimate.</p>
+        <p class="lead" id="lead">We'll write the message for you. You send it to Orlando on Facebook, and he gets back to you himself.</p>
       </div>
       <div>
         <form id="quote" novalidate>
-          <div class="field"><label for="f-name">Your name</label><input id="f-name" type="text" autocomplete="name" required><span class="err" id="e-name"></span></div>
-          <div class="field"><label for="f-phone">Your phone</label><input id="f-phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="So we can call you back"><span class="err" id="e-phone"></span></div>
+          <div class="field"><label for="f-name">Your name</label><input id="f-name" aria-describedby="e-name" type="text" autocomplete="name" required><span class="err" id="e-name"></span></div>
+          <div class="field"><label for="f-phone">Your phone</label><input id="f-phone" aria-describedby="e-phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="So we can call you back"><span class="err" id="e-phone"></span></div>
           <div class="field"><label for="f-town">Town <span class="opt">(optional)</span></label><input id="f-town" type="text" autocomplete="address-level2"></div>
-          <div class="field"><label for="f-job">What needs sealing?</label><textarea id="f-job" required placeholder="For example: joints in a parking lot, about how big it is"></textarea><span class="err" id="e-job"></span></div>
+          <div class="field"><label for="f-job">What needs sealing?</label><textarea id="f-job" aria-describedby="e-job" required placeholder="For example: joints in a parking lot, about how big it is"></textarea><span class="err" id="e-job"></span></div>
           <fieldset>
             <legend class="legend">Best time for the work <span class="opt">(optional)</span></legend>
             <div class="chips">
@@ -285,15 +294,15 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
               <input type="radio" name="when" id="w3" value="Weekends"><label for="w3">Weekends</label>
             </div>
           </fieldset>
-          <button class="btn send" type="submit" id="sendBtn">Send my request</button>
+          <button class="btn send" type="submit" id="sendBtn">Write my message for Facebook</button>
         </form>
         <div class="result" id="result" role="status" aria-live="polite">
-          <h3>Almost done</h3>
-          <p id="resultMsg">Your message is copied. Open Facebook, tap Message, and paste it in.</p>
+          <h3 id="resultHead" tabindex="-1">Almost done</h3>
+          <p id="resultMsg">Copy the message below, then open Facebook, tap Message, and paste it in.</p>
           <label class="sr" for="msgOut">Your message</label>
           <textarea id="msgOut" readonly></textarea>
           <div class="row">
-            <a class="btn btn-fill" data-fb href="https://www.facebook.com/profile.php?id=100034139794307" rel="noopener">Open Facebook to send it</a>
+            <a class="btn btn-fill" id="fbSend" data-fb href="https://www.facebook.com/profile.php?id=100034139794307" rel="noopener">Open Facebook to send it</a>
             <button class="btn copy" type="button" id="copyBtn">Copy message</button>
           </div>
         </div>
@@ -307,7 +316,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div>
       <p class="name">G&amp;G Caulking Service LLC</p>
       <ul>
-        <li><span class="soon" data-phone-foot>Phone coming soon</span></li>
+        <li data-phone-foot hidden></li>
         <li><a data-fb href="https://www.facebook.com/profile.php?id=100034139794307" rel="noopener">Facebook</a></li>
       </ul>
     </div>
@@ -325,7 +334,7 @@ var BUSINESS = 'G&G Caulking';
 var JOINT_GAP_PHONE = 130, JOINT_GAP_DESK = 190;  // slab panel size (px)
 var NOZZLE_RATE = 30;      // sealant per second at the nozzle
 var FLOW = 16;             // how fast wet sealant runs along a joint
-var AUTO_SPEED = 150;      // px/s when the nozzle runs by itself
+var AUTO_SPEED_PHONE = 190, AUTO_SPEED_DESK = 300;  // px/s when the gun runs by itself
 var IDLE_RESUME = 3000;    // ms after the last touch before it runs by itself again
 var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -334,10 +343,12 @@ var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!PHONE) return;
   var d = PHONE.replace(/\D/g,''), pretty = '(' + d.slice(0,3) + ') ' + d.slice(3,6) + '-' + d.slice(6);
   [].forEach.call(document.querySelectorAll('[data-phone],[data-phone-foot]'), function(el){
-    var a = document.createElement('a'); a.href = 'tel:+1' + d; a.textContent = pretty; a.className = el.hasAttribute('data-phone') ? 'phone' : '';
-    el.replaceWith(a);
+    var a = document.createElement('a'); a.href = 'tel:+1' + d; a.textContent = pretty;
+    if (el.hasAttribute('data-phone')) { a.className = 'phone'; el.replaceWith(a); } else { el.hidden = false; el.appendChild(a); }
   });
-  var r = document.getElementById('resultMsg'); if (r) r.textContent = 'Your text message is ready.';
+  var r = document.getElementById('resultMsg'); if (r) r.textContent = 'Your text message should open now. If it doesn\'t, copy the message below and text it to ' + pretty + '.';
+  document.getElementById('sendBtn').textContent = 'Text my request';
+  document.getElementById('lead').textContent = 'We\'ll write the text for you. It goes straight to Orlando, and he gets back to you himself.';
 })();
 
 /* ----- Shared animation loop ----- */
@@ -373,37 +384,32 @@ var P = { x: -9999, y: -9999, vx: 0, vy: 0, active: false, touch: false, lastUse
 /* ----- Random helper (seeded so the slab doesn't jump on rebuild) ----- */
 function rng(seed){ return function(){ seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }; }
 
-/* ----- Sealant bead: continuous runs, a wet sheen that travels along them ----- */
+/* ----- Sealant bead: matte grey, wall to wall; wet sealant is darker with a broad dull shine ----- */
 function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
-  off = off || null;
   var i = 0;
+  function Y(k){ return ys[k] + (off ? off[k] : 0); }
   while (i < n - 1) {
     if (Math.min(f[i], f[i + 1]) < 0.08) { i++; continue; }
     var s = i; while (i < n - 1 && Math.min(f[i], f[i + 1]) >= 0.08) i++; var e = i;
-    var wsum = 0; for (var k = s; k <= e; k++) wsum += wet[k]; var wv = wsum / (e - s + 1);
-    var c = Math.round(128 - 24 * wv), col = 'rgb(' + c + ',' + (c + 3) + ',' + (c + 7) + ')';
+    var wsum = 0; for (var k = s; k <= e; k++) wsum += Math.min(1, wet[k]); var wv = wsum / (e - s + 1);
+    var c = Math.round(122 - 26 * wv), col = 'rgb(' + c + ',' + (c + 3) + ',' + (c + 7) + ')';
     g.lineCap = 'butt'; g.strokeStyle = col; g.fillStyle = col;
     var wS = 0, wE = 0;
     for (k = s; k < e; k++) {
-      var fill = Math.min(1, (f[k] + f[k + 1]) / 2), crown = Math.max(0, (f[k] + f[k + 1]) / 2 - 1) * 4;
-      var w = JW * (0.55 + 0.5 * fill) + crown; if (k === s) wS = w; wE = w;
-      var y0 = ys[k] + (off ? off[k] : 0), y1 = ys[k + 1] + (off ? off[k + 1] : 0);
-      g.lineWidth = w; g.beginPath(); g.moveTo(xs[k] - (xs[k + 1] - xs[k]) * 0.02, y0 - (y1 - y0) * 0.02); g.lineTo(xs[k + 1], y1); g.stroke();
+      var fm = (f[k] + f[k + 1]) / 2, w = JW * 1.02 * Math.min(1, 0.55 + 0.6 * fm) + Math.max(0, fm - 1) * 3;
+      if (k === s) wS = w; wE = w;
+      g.lineWidth = w; g.beginPath(); g.moveTo(xs[k] - (xs[k + 1] - xs[k]) * 0.03, Y(k) - (Y(k + 1) - Y(k)) * 0.03); g.lineTo(xs[k + 1], Y(k + 1)); g.stroke();
     }
-    // rounded liquid fronts
-    if (s > 0 || f[s] > 0.08) { g.beginPath(); g.arc(xs[s], ys[s] + (off ? off[s] : 0), wS / 2, 0, 6.29); g.fill(); }
-    g.beginPath(); g.arc(xs[e], ys[e] + (off ? off[e] : 0), wE / 2, 0, 6.29); g.fill();
-    // sheen
-    if (e - s < 2) continue;
-    var gr = g.createLinearGradient(xs[s], ys[s], xs[e], ys[e]), span = e - s;
-    for (k = s; k <= e; k += 3) {
-      var a = 0.08 + 0.34 * (0.35 + 0.65 * wet[k]) * (0.55 + 0.45 * Math.sin(t * 2.4 - k * 0.19 + ph) * Math.sin(t * 0.8 + k * 0.045));
-      gr.addColorStop((k - s) / span, 'rgba(236,240,246,' + Math.max(0, a).toFixed(3) + ')');
+    // rounded liquid fronts where the bead stops short of the joint's end
+    if (s > 0) { g.beginPath(); g.arc(xs[s], Y(s), wS / 2, 0, 6.29); g.fill(); }
+    if (e < n - 1) { g.beginPath(); g.arc(xs[e], Y(e), wE / 2, 0, 6.29); g.fill(); }
+    // wet shine: broad and dull, slowly breathing, gone once cured
+    for (k = s; k < e; k++) {
+      var wk = Math.min(1, (wet[k] + wet[k + 1]) / 2); if (wk < 0.4) continue;
+      var sh = 0.1 * wk * (0.75 + 0.25 * Math.sin(t * 1.6 - k * 0.12 + ph));
+      g.strokeStyle = 'rgba(255,255,255,' + sh.toFixed(3) + ')'; g.lineWidth = JW * 0.9;
+      g.beginPath(); g.moveTo(xs[k], Y(k)); g.lineTo(xs[k + 1], Y(k + 1)); g.stroke();
     }
-    g.strokeStyle = gr; g.lineCap = 'round'; g.lineWidth = JW * 0.38;
-    g.beginPath();
-    for (k = s; k <= e; k++) { var yy = ys[k] - 0.7 + (off ? off[k] : 0); if (k === s) g.moveTo(xs[k] - 0.5, yy); else g.lineTo(xs[k] - 0.5, yy); }
-    g.stroke();
   }
 }
 
@@ -412,7 +418,7 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
   var hero = document.getElementById('hero'), cv = document.getElementById('slab'), g = cv.getContext('2d');
   var copy = document.getElementById('heroCopy'), head = document.querySelector('.top .wrap'), hint = document.getElementById('hint');
   var base = document.createElement('canvas'), bg = base.getContext('2d');
-  var W = 0, H = 0, DPR = 1, JW = 5, joints = [], nozzle = { x: 0, y: 0, a: -0.72, show: 0, on: false }, auto = null, doneAt = 0, fade = 1, slabSeed = 7, touched = false;
+  var W = 0, H = 0, DPR = 1, JW = 5, joints = [], nozzle = { x: 0, y: 0, a: -0.72, show: 0, on: false }, auto = null, doneAt = 0, fade = 1, slabSeed = 7, touched = false, autoSpeed = 190, lastX = null, lastY = null;
   var job = { visible: false, tick: tick };
 
   function rect(el, pad){ var h = hero.getBoundingClientRect(), b = el.getBoundingClientRect(); return { l: b.left - h.left - pad, t: b.top - h.top - pad, r: b.right - h.left + pad, b: b.bottom - h.top + pad }; }
@@ -442,11 +448,20 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
       }
       if (run) push(run);
     }
-    function push(run){ if (run.xs.length < 8) return; var n = run.xs.length; joints.push({ x: run.xs, y: run.ys, n: n, f: new Float32Array(n), wet: new Float32Array(n), ph: Math.random() * 6 }); }
+    function push(run){ if (run.xs.length < Math.max(8, gap * 0.6 / 5)) return; var n = run.xs.length; joints.push({ x: run.xs, y: run.ys, n: n, f: new Float32Array(n), wet: new Float32Array(n), ph: Math.random() * 6 }); }
     ys.forEach(function(y){ line(0, y, W, y); });
     xs.forEach(function(x){ line(x, 0, x, H); });
     paintBase();
-    if (REDUCED) { joints.forEach(function(j, i){ if (i % 2 === 0) for (var s = 0; s < j.n; s++) j.f[s] = 1; }); draw(0); }
+    if (REDUCED) { joints.forEach(function(j, i){ if (i % 2 === 0) for (var s = 0; s < j.n; s++) j.f[s] = 1; }); hint.hidden = true; }
+    else {
+      // Open on a job under way: the first joint below the words is done, the gun is partway along the next.
+      var below = joints.filter(function(j){ return j.y[0] > c.b && Math.abs(j.y[j.n - 1] - j.y[0]) < 1; }).sort(function(p, q){ return p.y[0] - q.y[0]; });
+      if (below[0]) for (var q = 0; q < below[0].n; q++) below[0].f[q] = 1;
+      var nx = below[1] || below[0];
+      if (nx && nx !== below[0]) { var st = Math.round(nx.n * 0.35); for (q = 0; q < st; q++) { nx.f[q] = 1; nx.wet[q] = q / st; } nozzle.x = nx.x[st]; nozzle.y = nx.y[st]; nozzle.show = 1; auto = { j: nx, dir: 1, i: st }; }
+    }
+    autoSpeed = W < 700 ? AUTO_SPEED_PHONE : AUTO_SPEED_DESK;
+    draw(0);
   }
 
   function paintBase(){
@@ -477,7 +492,7 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
     // Saw-cut grooves
     joints.forEach(function(j){
       b.lineCap = 'butt';
-      b.strokeStyle = 'rgba(250,247,240,.55)'; b.lineWidth = 1.5; pathOf(b, j, 0.9 + JW / 2); b.stroke();
+      b.strokeStyle = 'rgba(70,64,56,.22)'; b.lineWidth = JW + 4; pathOf(b, j, 0.6); b.stroke();   // worn saw-cut chamfer
       b.strokeStyle = '#57534b'; b.lineWidth = JW; pathOf(b, j, 0); b.stroke();
       b.strokeStyle = '#38352f'; b.lineWidth = JW - 2.5; pathOf(b, j, -0.5); b.stroke();
     });
@@ -519,6 +534,9 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
     return { j: best, i: bi };
   }
 
+  // A small tick on Android when a finger finishes a joint (iOS ignores it)
+  function buzz(j){ if (j.buzzed || !navigator.vibrate) return; for (var i = 0; i < j.n; i++) if (j.f[i] < 0.6) return; j.buzzed = true; try { navigator.vibrate(8); } catch (x) {} }
+
   function flow(dt){
     var k = Math.min(0.45, FLOW * dt);
     joints.forEach(function(j){
@@ -540,8 +558,13 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
     var best = null, bd = 1e9;
     joints.forEach(function(j){
       var open = 0; for (var i = 0; i < j.n; i++) if (j.f[i] < 0.6) open++;
-      if (open < j.n * 0.25) return;
-      [0, j.n - 1].forEach(function(e){ var d = Math.hypot(j.x[e] - nozzle.x, j.y[e] - nozzle.y) + (j.y[0] < H * 0.4 ? 300 : 0); if (d < bd) { bd = d; best = { j: j, dir: e === 0 ? 1 : -1, i: e }; } });
+      if (!open) return;
+      [0, j.n - 1].forEach(function(e){
+        var dir = e === 0 ? 1 : -1, i0 = e; while (i0 >= 0 && i0 < j.n && j.f[i0] >= 0.6) i0 += dir;
+        if (i0 < 0 || i0 >= j.n) return;
+        var d = Math.hypot(j.x[i0] - nozzle.x, j.y[i0] - nozzle.y) + (j.y[0] < H * 0.4 ? 300 : 0);
+        if (d < bd) { bd = d; best = { j: j, dir: dir, i: i0 }; }
+      });
     });
     return best;
   }
@@ -552,18 +575,22 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
     var userIn = P.active && lx >= 0 && lx <= W && ly >= 0 && ly <= H && !idle;
     if (userIn) {
       auto = null; touched = true; hint.classList.add('gone');
+      var px = nozzle.x, py = nozzle.y;
       nozzle.x += (lx - nozzle.x) * Math.min(1, dt * 22); nozzle.y += (ly - nozzle.y) * Math.min(1, dt * 22);
-      nozzle.on = true; dispense(nozzle.x, nozzle.y, dt);
+      nozzle.on = true; nozzle.lift = 0;
+      // lay sealant along the whole path since last frame, so a quick swipe leaves a bead, not dashes
+      var dist = Math.hypot(nozzle.x - px, nozzle.y - py), steps = Math.max(1, Math.ceil(dist / 4)), give = Math.max(dt, dist / 140); // a fast swipe still lays a full bead
+      for (var st = 1; st <= steps; st++) { var hit = dispense(px + (nozzle.x - px) * st / steps, py + (nozzle.y - py) * st / steps, give / steps); if (hit && P.touch) buzz(hit.j); }
     } else if (idle) {
       if (!auto) { auto = nextAuto(); if (auto) auto.travel = true; }
       if (auto) {
         var j = auto.j, tx = j.x[Math.round(auto.i)], ty = j.y[Math.round(auto.i)];
         if (auto.travel) {
-          var dx = tx - nozzle.x, dy = ty - nozzle.y, d = Math.hypot(dx, dy), st = 520 * dt;
-          if (d <= st) { nozzle.x = tx; nozzle.y = ty; auto.travel = false; } else { nozzle.x += dx / d * st; nozzle.y += dy / d * st; }
-          nozzle.on = false;
+          var dx = tx - nozzle.x, dy = ty - nozzle.y, d = Math.hypot(dx, dy);
+          if (d < 2) { nozzle.x = tx; nozzle.y = ty; auto.travel = false; } else { nozzle.x += dx * Math.min(1, dt * 5); nozzle.y += dy * Math.min(1, dt * 5); }
+          nozzle.on = false; nozzle.lift = Math.min(1, d / 60);
         } else {
-          auto.i += auto.dir * AUTO_SPEED * dt / 5;
+          nozzle.lift = 0; auto.i += auto.dir * autoSpeed * dt / 5;
           if (auto.i < 0 || auto.i > j.n - 1) auto = null;
           else { nozzle.x = j.x[Math.round(auto.i)]; nozzle.y = j.y[Math.round(auto.i)]; nozzle.on = true; dispense(nozzle.x, nozzle.y, dt); }
         }
@@ -573,7 +600,7 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
     flow(dt);
     // A finished slab rests, then the crew moves on to a fresh pour.
     if (!doneAt && allDone()) doneAt = t;
-    if (doneAt && t - doneAt > 4) { fade -= dt / 1.2; if (fade <= 0) { fade = 1; doneAt = 0; slabSeed++; joints.forEach(function(j){ j.f.fill(0); j.wet.fill(0); }); paintBase(); auto = null; } }
+    if (doneAt && t - doneAt > 4) { fade -= dt / 1.2; if (fade <= 0) { fade = 1; doneAt = 0; slabSeed++; joints.forEach(function(j){ j.f.fill(0); j.wet.fill(0); j.buzzed = false; }); paintBase(); auto = null; } }
     draw(t);
   }
 
@@ -587,29 +614,39 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
   }
 
   function drawNozzle(t){
-    var s = W < 700 ? 0.85 : 1;
-    nozzle.a += ((nozzle.y < 190 ? 0.72 : -0.72) - nozzle.a) * 0.08; // tube leans away from the header
+    var s = W < 700 ? 0.8 : 1, lift = nozzle.lift || 0;
+    nozzle.a += ((nozzle.y < 190 ? 0.72 : -0.72) - nozzle.a) * 0.08; // gun leans away from the header
     var a = nozzle.a + Math.sin(t * 1.7) * 0.03;
+    var sealed = window.ggSlab ? window.ggSlab.sealed() : 0;
     g.save(); g.globalAlpha = nozzle.show; g.translate(nozzle.x, nozzle.y); g.rotate(a);
-    // soft shadow on the slab
-    g.save(); g.rotate(-a); g.translate(14 * s, 10 * s); g.rotate(a);
-    g.fillStyle = 'rgba(40,36,30,.18)'; g.filter = 'blur(4px)'; g.fillRect(8 * s, -12 * s, 150 * s, 24 * s); g.filter = 'none'; g.restore();
-    // nozzle: translucent tapered tip
-    var ng = g.createLinearGradient(0, -6 * s, 0, 6 * s); ng.addColorStop(0, '#f6efdc'); ng.addColorStop(0.5, '#e3d6b6'); ng.addColorStop(1, '#bfae88');
-    g.fillStyle = ng; g.beginPath(); g.moveTo(0, -1.6 * s); g.lineTo(38 * s, -6 * s); g.lineTo(38 * s, 6 * s); g.lineTo(0, 1.6 * s); g.closePath(); g.fill();
-    g.fillStyle = '#6b6f75'; g.beginPath(); g.arc(0, 0, 2 * s, 0, 6.29); g.fill();
-    // cartridge
-    var cg = g.createLinearGradient(0, -14 * s, 0, 14 * s); cg.addColorStop(0, '#f4f2ee'); cg.addColorStop(0.45, '#dedbd4'); cg.addColorStop(1, '#a9a59c');
-    g.fillStyle = cg; g.fillRect(38 * s, -13 * s, 120 * s, 26 * s);
-    g.fillStyle = '#ff5b14'; g.fillRect(70 * s, -13 * s, 54 * s, 26 * s);
-    var lg = g.createLinearGradient(0, -13 * s, 0, 13 * s); lg.addColorStop(0, 'rgba(255,255,255,.25)'); lg.addColorStop(0.5, 'rgba(255,255,255,0)'); lg.addColorStop(1, 'rgba(60,20,0,.28)');
-    g.fillStyle = lg; g.fillRect(70 * s, -13 * s, 54 * s, 26 * s);
-    g.fillStyle = '#c9c5bc'; g.fillRect(38 * s, -14 * s, 5 * s, 28 * s);
+    // shadow on the slab; it drops further away while the gun is lifted between joints
+    g.save(); g.shadowColor = 'rgba(40,36,30,.34)'; g.shadowBlur = (8 + 10 * lift) * DPR; // shadow offsets ignore the transform: screen space
+    g.shadowOffsetX = (5 + 10 * lift) * DPR; g.shadowOffsetY = (8 + 14 * lift) * DPR;
+    g.fillStyle = '#b9b5ac'; g.fillRect(52 * s, -13 * s, 108 * s, 26 * s); g.fillRect(150 * s, 14 * s, 26 * s, 36 * s); g.restore();
+    // nozzle: translucent plastic, cut at 45 degrees at the tip
+    var ng = g.createLinearGradient(0, -7 * s, 0, 7 * s); ng.addColorStop(0, '#f3ecd8'); ng.addColorStop(0.5, '#ddd0ae'); ng.addColorStop(1, '#b3a27c');
+    g.fillStyle = ng; g.beginPath(); g.moveTo(2 * s, -2.4 * s); g.lineTo(52 * s, -7 * s); g.lineTo(52 * s, 7 * s); g.lineTo(-1 * s, 2.4 * s); g.closePath(); g.fill();
+    g.fillStyle = 'rgba(100,104,110,.85)'; g.beginPath(); g.moveTo(2 * s, -2.4 * s); g.lineTo(-1 * s, 2.4 * s); g.lineTo(8 * s, 1.6 * s); g.lineTo(10 * s, -2.2 * s); g.closePath(); g.fill(); // sealant inside the tip
+    // cartridge: white tube with a printed label
+    var cg = g.createLinearGradient(0, -13 * s, 0, 13 * s); cg.addColorStop(0, '#f6f4ef'); cg.addColorStop(0.45, '#e4e1da'); cg.addColorStop(1, '#aaa69d');
+    g.fillStyle = cg; g.fillRect(52 * s, -13 * s, 108 * s, 26 * s);
+    g.fillStyle = 'rgba(154,150,141,.55)'; g.fillRect(82 * s, -6 * s, 46 * s, 3 * s); g.fillRect(82 * s, 1 * s, 30 * s, 2.5 * s);
+    // gun: steel cradle along the tube, rear plate, plunger rod with hook
+    g.fillStyle = '#34383e'; g.fillRect(56 * s, -15 * s, 104 * s, 3 * s); g.fillRect(56 * s, 12 * s, 104 * s, 3 * s);
+    g.fillRect(52 * s, -16 * s, 5 * s, 32 * s);
+    g.fillRect(158 * s, -16 * s, 7 * s, 32 * s);
+    var rod = (70 - 40 * sealed) * s; // plunger creeps forward as the slab fills
+    g.fillStyle = '#2b2e33'; g.fillRect(165 * s, -2 * s, rod, 4 * s);
+    g.strokeStyle = '#2b2e33'; g.lineWidth = 3 * s; g.beginPath(); g.arc(165 * s + rod + 5 * s, 0, 6 * s, -1.6, 1.6); g.stroke();
+    // handle and trigger
+    g.fillStyle = '#ff5b14'; g.beginPath(); g.moveTo(150 * s, 14 * s); g.lineTo(172 * s, 14 * s); g.lineTo(178 * s, 48 * s); g.quadraticCurveTo(172 * s, 54 * s, 164 * s, 50 * s); g.closePath(); g.fill();
+    g.fillStyle = '#d94a0c'; g.beginPath(); g.moveTo(140 * s, 15 * s); g.lineTo(148 * s, 15 * s); g.lineTo(156 * s, 40 * s); g.lineTo(150 * s, 42 * s); g.closePath(); g.fill();
     g.restore();
   }
 
   // For testing: share of joint length sealed
   window.ggSlab = { sealed: function(){ var a = 0, b = 0; joints.forEach(function(j){ for (var i = 0; i < j.n; i++) { b++; if (j.f[i] >= 0.6) a++; } }); return b ? a / b : 0; }, joints: function(){ return joints.length; } };
+  if (window.matchMedia('(hover: hover)').matches) hint.textContent = 'Move across the slab to seal it';
   function start(){ build(); job.visible = true; watch(hero, job); Loop.add(job); Loop.wake(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
   window.addEventListener('resize', function(){ build(); });
@@ -619,7 +656,7 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
 /* ===== Seams: section joints that fill with sealant and give under the pointer ===== */
 (function(){
   [].forEach.call(document.querySelectorAll('.seam'), function(seam){
-    var cv = seam.querySelector('canvas'), g = cv.getContext('2d'), W = 0, H = 34, DPR = 1, n = 0, f, d, v, xs, ys, od, wt, front = 0, started = false;
+    var cv = seam.querySelector('canvas'), g = cv.getContext('2d'), W = 0, H = 34, DPR = 1, n = 0, f, d, v, xs, ys, od, wt, front = 0, started = false, settled = 0;
     var job = { visible: false, tick: tick, onShow: function(){ started = true; } };
     function size(){
       var w = Math.round(seam.clientWidth); if (w === W) return;
@@ -637,12 +674,15 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
         var nb = ((i > 0 ? d[i - 1] : 0) + (i < n - 1 ? d[i + 1] : 0) - 2 * d[i]) * 60;
         v[i] += (-38 * d[i] - 6.5 * v[i] + nb + force * 6) * dt; d[i] += v[i] * dt;
       }
+      // once full and still, the joint stops redrawing until something touches it
+      var calm = !near && front >= n + 4; if (calm) for (i = 0; i < n; i += 4) if (Math.abs(v[i]) > 0.05 || Math.abs(d[i]) > 0.05) { calm = false; break; }
+      if (calm && settled > 2) return; settled = calm ? settled + 1 : 0;
       draw(t);
     }
     function draw(t){
       g.setTransform(DPR, 0, 0, DPR, 0, 0); g.clearRect(0, 0, W, H);
       var cy = H / 2;
-      g.fillStyle = 'rgba(250,247,240,.45)'; g.fillRect(0, cy + 4, W, 1.5);
+      g.fillStyle = 'rgba(70,64,56,.22)'; g.fillRect(0, cy - 6, W, 12);
       g.fillStyle = '#57534b'; g.fillRect(0, cy - 4, W, 8); g.fillStyle = '#38352f'; g.fillRect(0, cy - 2.5, W, 5);
       for (var i = 0; i < n; i++) { xs[i] = i * 4; ys[i] = cy; od[i] = d[i] * 0.18; wt[i] = Math.max(0, Math.min(1, 1 - (front - i) / 220)) + Math.min(0.6, Math.abs(d[i]) * 0.04); }
       bead(g, xs, ys, n, f, wt, 7.5, t, 0, od);
@@ -650,14 +690,6 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
     size(); window.addEventListener('resize', size);
     watch(seam, job); Loop.add(job);
   });
-})();
-
-/* ===== Work grid: the joints between photos fill with sealant ===== */
-(function(){
-  var grid = document.getElementById('workGrid'), p = 0, go = false;
-  if (REDUCED) { grid.style.setProperty('--fill', '100%'); return; }
-  var job = { visible: false, onShow: function(){ go = true; }, tick: function(t, dt){ if (go && p < 100) { p = Math.min(100, p + dt * 55); grid.style.setProperty('--fill', p.toFixed(1) + '%'); } } };
-  watch(grid, job); Loop.add(job);
 })();
 
 /* ===== Photos: data blocks load lazily near the viewport ===== */
@@ -675,8 +707,16 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
 /* ===== Estimate form: composes the message and hands it off ===== */
 (function(){
   var form = document.getElementById('quote'), out = document.getElementById('msgOut'), res = document.getElementById('result');
+  var note = document.getElementById('resultMsg'), copyBtn = document.getElementById('copyBtn');
+  var COPIED = 'Your message is copied. Open Facebook, tap Message, and paste it in.';
   function val(id){ return document.getElementById(id).value.trim(); }
-  function mark(id, msg){ var f = document.getElementById('f-' + id).closest('.field'); f.classList.toggle('bad', !!msg); document.getElementById('e-' + id).textContent = msg || ''; return !msg; }
+  function mark(id, msg){ var el = document.getElementById('f-' + id); el.closest('.field').classList.toggle('bad', !!msg); el.setAttribute('aria-invalid', msg ? 'true' : 'false'); document.getElementById('e-' + id).textContent = msg || ''; return !msg; }
+  function show(msg){
+    out.value = msg; res.classList.add('show');
+    try { sessionStorage.setItem('gg-msg', msg); } catch (x) {}
+    res.scrollIntoView({ behavior: REDUCED ? 'auto' : 'smooth', block: 'center' });
+    document.getElementById('resultHead').focus({ preventScroll: true });
+  }
   form.addEventListener('submit', function(e){
     e.preventDefault();
     var name = val('f-name'), phone = val('f-phone'), job = val('f-job'), town = val('f-town'), when = form.querySelector('input[name=when]:checked').value;
@@ -685,18 +725,27 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
               mark('job', job ? '' : 'Please tell us a little about what needs sealing.')];
     if (ok.indexOf(false) > -1) { var bad = form.querySelector('.bad input,.bad textarea'); if (bad) bad.focus(); return; }
     var msg = 'Hi ' + BUSINESS + '! I\'d like a free estimate.\nName: ' + name + '\nPhone: ' + phone + (town ? '\nTown: ' + town : '') + '\nJob: ' + job + '\nBest time: ' + when;
+    show(msg);
     if (PHONE) { location.href = 'sms:+1' + PHONE.replace(/\D/g, '') + '?&body=' + encodeURIComponent(msg); return; }
-    out.value = msg; res.classList.add('show');
-    copy(msg, true);
-    res.scrollIntoView({ behavior: REDUCED ? 'auto' : 'smooth', block: 'center' });
+    copy(true);
   });
-  function copy(msg, quiet){
-    var m = document.getElementById('resultMsg'), done = function(){ m.textContent = 'Your message is copied. Open Facebook, tap Message, and paste it in.'; };
-    var fail = function(){ m.textContent = 'Copy the message below, then open Facebook, tap Message, and paste it in.'; if (!quiet) { out.focus(); out.select(); } };
-    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(msg).then(done, fail);
-    else { out.select(); try { document.execCommand('copy') ? done() : fail(); } catch (x) { fail(); } }
+  // execCommand copy: works in more in-app browsers than the async clipboard
+  function legacy(){
+    var ro = out.readOnly; out.readOnly = false; out.focus(); out.setSelectionRange(0, out.value.length);
+    var ok = false; try { ok = document.execCommand('copy'); } catch (x) {}
+    out.readOnly = ro; return ok;
   }
-  document.getElementById('copyBtn').addEventListener('click', function(){ copy(out.value, false); });
+  function copy(quiet){
+    function done(){ note.textContent = COPIED; copyBtn.textContent = 'Copied'; setTimeout(function(){ copyBtn.textContent = 'Copy message'; }, 2000); }
+    function fallback(){ if (legacy()) done(); else if (!quiet) { out.focus(); out.setSelectionRange(0, out.value.length); } }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(out.value).then(done, fallback);
+    else fallback();
+  }
+  copyBtn.addEventListener('click', function(){ copy(false); });
+  // Tapping through to Facebook copies once more first (a fresh tap is the best chance in an in-app browser)
+  document.getElementById('fbSend').addEventListener('click', function(){ if (out.value && legacy()) note.textContent = COPIED; });
+  // Back from Facebook: the message is still here
+  window.addEventListener('pageshow', function(){ var m = null; try { m = sessionStorage.getItem('gg-msg'); } catch (x) {} if (m && !out.value) { out.value = m; res.classList.add('show'); } });
 })();
 </script>
 <!-- Photo data (stills from the owner's Facebook job video, 2026-10-18) -->

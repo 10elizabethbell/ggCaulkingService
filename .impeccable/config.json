@@ -1,0 +1,23 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "roboto",
+        "createdAt": "2026-10-18T03:41:38.712Z",
+        "reason": "pitch-site house style (Ellie's ellie-taste.md): system font stack on every pitch site"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T03:41:38.783Z",
+        "reason": "false positive: full-bleed sections, content inset by .wrap 16px gutter"
+      }
+    ]
+  }
+}
