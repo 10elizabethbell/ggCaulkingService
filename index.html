@@ -73,7 +73,7 @@ section{padding:72px 0 72px}
 .btn-fill{background:var(--paint);color:var(--ink);box-shadow:0 8px 18px -10px rgba(31,39,49,.55)}
 .btn-line{background:transparent;color:var(--ink)}
 .btn svg{width:20px;height:20px;flex:none}
-.hint{position:absolute;z-index:2;left:0;right:0;bottom:14px;text-align:center;font-size:15px;font-weight:700;color:var(--ink-2);pointer-events:none;opacity:.85;transition:opacity .6s}
+.hint{position:absolute;z-index:2;left:0;right:0;bottom:14px;text-align:center;font-size:15px;font-weight:700;color:var(--ink);pointer-events:none;transition:opacity .6s}
 .hint.gone{opacity:0}
 
 /* ---------- Seams (section joints) ---------- */
@@ -116,7 +116,7 @@ section{padding:72px 0 72px}
 .steps li{display:grid;grid-template-columns:52px 1fr;gap:4px 14px;padding:20px 0;border-top:5px solid var(--groove)}
 .steps li:last-child{border-bottom:5px solid var(--groove)}
 .steps .n{grid-row:span 2;font-size:44px;font-weight:900;line-height:.9;color:var(--paint-ink)}
-.steps h3{font-size:22px;line-height:1.05;align-self:end}
+.steps h3{font-size:22px;line-height:1.05;align-self:start;padding-top:4px}
 .steps p{color:var(--ink-2)}
 
 /* ---------- Estimate form ---------- */
@@ -190,6 +190,7 @@ footer .fine{margin-top:20px;font-size:14px;color:#aab2bd}
   .steps ol{grid-template-columns:repeat(3,1fr);gap:28px}
   .steps li:last-child{border-bottom:0}
   .estimate .wrap{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
+  .estimate .wrap>div:first-child{position:sticky;top:48px}
   footer .wrap{display:flex;justify-content:space-between;align-items:flex-end}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.work img,.night img{transition:none}}
@@ -233,9 +234,9 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div class="wrap">
       <h2>Our work</h2>
       <div class="grid" id="workGrid">
-        <figure class="tall"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-joint" alt="A sealed saw-cut joint running through a new concrete slab" draggable="false"></figure>
+        <figure class="tall"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-lot" alt="Finished concrete lot taped off with caution tape" draggable="false"></figure>
         <figure class="sq"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-slab" alt="New concrete slab beside a commercial building at sunrise" draggable="false"></figure>
-        <figure class="sq"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-lot" alt="Finished concrete lot taped off with caution tape" draggable="false"></figure>
+        <figure class="sq"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-joint" alt="A sealed saw-cut joint running through a new concrete slab" draggable="false"></figure>
         <figure class="wide"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-front" alt="Concrete lot in front of a new commercial building" draggable="false"></figure>
       </div>
       <a class="more" data-fb href="https://www.facebook.com/profile.php?id=100034139794307" rel="noopener">
@@ -334,7 +335,7 @@ var BUSINESS = 'G&G Caulking';
 var JOINT_GAP_PHONE = 130, JOINT_GAP_DESK = 190;  // slab panel size (px)
 var NOZZLE_RATE = 30;      // sealant per second at the nozzle
 var FLOW = 16;             // how fast wet sealant runs along a joint
-var AUTO_SPEED_PHONE = 190, AUTO_SPEED_DESK = 300;  // px/s when the gun runs by itself
+var AUTO_SPEED_PHONE = 120, AUTO_SPEED_DESK = 300;  // px/s when the gun runs by itself
 var IDLE_RESUME = 3000;    // ms after the last touch before it runs by itself again
 var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -384,32 +385,27 @@ var P = { x: -9999, y: -9999, vx: 0, vy: 0, active: false, touch: false, lastUse
 /* ----- Random helper (seeded so the slab doesn't jump on rebuild) ----- */
 function rng(seed){ return function(){ seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }; }
 
-/* ----- Sealant bead: matte grey, wall to wall; wet sealant is darker with a broad dull shine ----- */
+/* ----- Sealant bead: a rounded grey bead that slightly overfills the groove; wet sealant is darker ----- */
 function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
   var i = 0;
   function Y(k){ return ys[k] + (off ? off[k] : 0); }
+  function run(s, e, width, color, cap){
+    g.strokeStyle = color; g.lineCap = cap ? 'round' : 'butt'; g.lineJoin = 'round';
+    g.lineWidth = width; g.beginPath(); g.moveTo(xs[s], Y(s)); for (var k = s + 1; k <= e; k++) g.lineTo(xs[k], Y(k)); g.stroke();
+  }
   while (i < n - 1) {
     if (Math.min(f[i], f[i + 1]) < 0.08) { i++; continue; }
     var s = i; while (i < n - 1 && Math.min(f[i], f[i + 1]) >= 0.08) i++; var e = i;
-    var wsum = 0; for (var k = s; k <= e; k++) wsum += Math.min(1, wet[k]); var wv = wsum / (e - s + 1);
-    var c = Math.round(122 - 26 * wv), col = 'rgb(' + c + ',' + (c + 3) + ',' + (c + 7) + ')';
-    g.lineCap = 'butt'; g.strokeStyle = col; g.fillStyle = col;
-    var wS = 0, wE = 0;
-    for (k = s; k < e; k++) {
-      var fm = (f[k] + f[k + 1]) / 2, w = JW * 1.02 * Math.min(1, 0.55 + 0.6 * fm) + Math.max(0, fm - 1) * 3;
-      if (k === s) wS = w; wE = w;
-      g.lineWidth = w; g.beginPath(); g.moveTo(xs[k] - (xs[k + 1] - xs[k]) * 0.03, Y(k) - (Y(k + 1) - Y(k)) * 0.03); g.lineTo(xs[k + 1], Y(k + 1)); g.stroke();
-    }
-    // rounded liquid fronts where the bead stops short of the joint's end
-    if (s > 0) { g.beginPath(); g.arc(xs[s], Y(s), wS / 2, 0, 6.29); g.fill(); }
-    if (e < n - 1) { g.beginPath(); g.arc(xs[e], Y(e), wE / 2, 0, 6.29); g.fill(); }
-    // wet shine: broad and dull, slowly breathing, gone once cured
-    for (k = s; k < e; k++) {
-      var wk = Math.min(1, (wet[k] + wet[k + 1]) / 2); if (wk < 0.4) continue;
-      var sh = 0.1 * wk * (0.75 + 0.25 * Math.sin(t * 1.6 - k * 0.12 + ph));
-      g.strokeStyle = 'rgba(255,255,255,' + sh.toFixed(3) + ')'; g.lineWidth = JW * 0.9;
-      g.beginPath(); g.moveTo(xs[k], Y(k)); g.lineTo(xs[k + 1], Y(k + 1)); g.stroke();
-    }
+    var wsum = 0, fsum = 0; for (var k = s; k <= e; k++) { wsum += Math.min(1, wet[k]); fsum += Math.min(1.3, f[k]); }
+    var wv = wsum / (e - s + 1), fv = fsum / (e - s + 1);
+    var c = Math.round(124 - 26 * wv), W = JW * (0.75 + 0.5 * Math.min(1, fv)) + Math.max(0, fv - 1) * 2;
+    var cap = true;
+    // body: dark edge where it meets the concrete, the bead, then a soft rounded crown
+    run(s, e, W + 1.6, 'rgb(' + (c - 34) + ',' + (c - 32) + ',' + (c - 28) + ')', cap);
+    run(s, e, W * 0.82, 'rgb(' + c + ',' + (c + 3) + ',' + (c + 7) + ')', cap);
+    run(s, e, W * 0.42, 'rgba(' + (c + 26) + ',' + (c + 29) + ',' + (c + 33) + ',' + (0.55 + 0.25 * wv).toFixed(2) + ')', cap);
+    // while wet, a dull shine breathes along it
+    if (wv > 0.3) run(s, e, W * 0.7, 'rgba(255,255,255,' + (0.07 * wv * (0.8 + 0.2 * Math.sin(t * 1.6 + ph))).toFixed(3) + ')', cap);
   }
 }
 
@@ -432,8 +428,8 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
     var gap = W < 700 ? JOINT_GAP_PHONE : JOINT_GAP_DESK;
     var hd = rect(head, 8), hn = rect(hint, 10);
     var ex = [rect(copy, 18), { l: -1, t: -1, r: W + 1, b: hd.b + 40 }, { l: -1, t: hn.t, r: W + 1, b: hn.b }];
-    var c = ex[0];
-    // Grid anchored to the text block so no joint runs through the words.
+    var c = ex[0]; c.l = -1; c.t = -1; c.b += 12; // the words sit on one uncut pour, from the page edge to its joints
+    // Grid anchored to that panel so no joint runs through the words.
     var ay = c.b + 8, ax = (c.r < W - gap * 0.7) ? c.r + 8 : W / 2;
     var xs = [], ys = [], k;
     for (k = -20; k <= 20; k++) { var x = ax + k * gap; if (x > 10 && x < W - 10) xs.push(x); var y = ay + k * gap; if (y > 10 && y < H - 6) ys.push(y); }
@@ -458,7 +454,7 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
       var below = joints.filter(function(j){ return j.y[0] > c.b && Math.abs(j.y[j.n - 1] - j.y[0]) < 1; }).sort(function(p, q){ return p.y[0] - q.y[0]; });
       if (below[0]) for (var q = 0; q < below[0].n; q++) below[0].f[q] = 1;
       var nx = below[1] || below[0];
-      if (nx && nx !== below[0]) { var st = Math.round(nx.n * 0.35); for (q = 0; q < st; q++) { nx.f[q] = 1; nx.wet[q] = q / st; } nozzle.x = nx.x[st]; nozzle.y = nx.y[st]; nozzle.show = 1; auto = { j: nx, dir: 1, i: st }; }
+      if (nx && nx !== below[0]) { var st = Math.round(nx.n * (W < 700 ? 0.18 : 0.35)); for (q = 0; q < st; q++) { nx.f[q] = 1; nx.wet[q] = q / st; } nozzle.x = nx.x[st]; nozzle.y = nx.y[st]; nozzle.show = 1; auto = { j: nx, dir: 1, i: st }; }
     }
     autoSpeed = W < 700 ? AUTO_SPEED_PHONE : AUTO_SPEED_DESK;
     draw(0);
@@ -468,27 +464,39 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
     var r = rng(slabSeed), b = bg;
     b.setTransform(DPR, 0, 0, DPR, 0, 0);
     b.fillStyle = '#cdc9c0'; b.fillRect(0, 0, W, H);
-    // Pour-to-pour tone drift
+    // Pour-to-pour tone drift and mottling
     for (var i = 0; i < 16; i++) {
       var x = r() * W, y = r() * H, rad = 120 + r() * 340, dark = r() < 0.5;
       var gr = b.createRadialGradient(x, y, 0, x, y, rad);
-      gr.addColorStop(0, dark ? 'rgba(120,112,100,.10)' : 'rgba(240,236,228,.16)'); gr.addColorStop(1, 'rgba(0,0,0,0)');
+      gr.addColorStop(0, dark ? 'rgba(120,112,100,.12)' : 'rgba(240,236,228,.16)'); gr.addColorStop(1, 'rgba(0,0,0,0)');
       b.fillStyle = gr; b.fillRect(0, 0, W, H);
     }
-    // Broom finish: fine wavering strokes across the slab
-    b.lineWidth = 1;
-    for (var y = 0; y < H; y += 2.4) {
-      b.strokeStyle = r() < 0.5 ? 'rgba(90,84,74,' + (0.03 + r() * 0.05) + ')' : 'rgba(250,247,240,' + (0.04 + r() * 0.06) + ')';
-      b.beginPath(); var ph = r() * 6, amp = 0.6 + r() * 1.2, yy = y + r() * 2;
-      for (var x = -10; x <= W + 10; x += 24) b.lineTo(x, yy + Math.sin(x / 90 + ph) * amp + (r() - 0.5) * 0.8);
-      b.stroke();
+    var mots = Math.round(W * H / 2600);
+    for (i = 0; i < mots; i++) {
+      var mx = r() * W, my = r() * H, mr = 8 + r() * 46, md = r() < 0.55;
+      var mg = b.createRadialGradient(mx, my, 0, mx, my, mr);
+      mg.addColorStop(0, md ? 'rgba(110,102,90,' + (0.05 + r() * 0.07) + ')' : 'rgba(246,243,236,' + (0.06 + r() * 0.08) + ')'); mg.addColorStop(1, 'rgba(0,0,0,0)');
+      b.fillStyle = mg; b.fillRect(mx - mr, my - mr, mr * 2, mr * 2);
     }
-    // Aggregate and pinholes
-    var n = Math.round(W * H / 70);
+    // Broom finish: broken, wavering drags of uneven spacing and weight
+    for (var y = 0; y < H; y += 2 + r() * 4) {
+      var x0 = -20;
+      while (x0 < W) {
+        var len = 60 + r() * 320, dk = r() < 0.55;
+        b.strokeStyle = dk ? 'rgba(84,78,68,' + (0.05 + r() * 0.09) + ')' : 'rgba(252,249,242,' + (0.05 + r() * 0.1) + ')';
+        b.lineWidth = 0.6 + r() * 1.3;
+        b.beginPath(); var ph = r() * 6, amp = 0.8 + r() * 2.2, yy = y + r() * 2;
+        for (var x = x0; x <= x0 + len; x += 14) b.lineTo(x, yy + Math.sin(x / 70 + ph) * amp + (r() - 0.5) * 1.1);
+        b.stroke(); x0 += len + r() * 40;
+      }
+    }
+    // Aggregate, sand and pinholes
+    var n = Math.round(W * H / 55);
     for (i = 0; i < n; i++) {
-      var s = r(); b.fillStyle = s < 0.45 ? 'rgba(96,90,80,' + (0.25 + r() * 0.35) + ')' : s < 0.85 ? 'rgba(245,242,235,' + (0.3 + r() * 0.4) + ')' : 'rgba(150,132,110,.4)';
-      var d = 0.4 + r() * (s > 0.97 ? 2.2 : 1.1); b.fillRect(r() * W, r() * H, d, d);
+      var sv = r(); b.fillStyle = sv < 0.45 ? 'rgba(92,86,76,' + (0.25 + r() * 0.4) + ')' : sv < 0.85 ? 'rgba(246,243,236,' + (0.3 + r() * 0.45) + ')' : 'rgba(150,130,104,.45)';
+      var d = 0.5 + r() * (sv > 0.96 ? 3 : 1.3); b.fillRect(r() * W, r() * H, d, d * (0.6 + r() * 0.8));
     }
+    for (i = 0; i < n / 60; i++) { b.fillStyle = 'rgba(60,55,48,.45)'; b.beginPath(); b.arc(r() * W, r() * H, 0.8 + r() * 1.6, 0, 6.29); b.fill(); }
     // Saw-cut grooves
     joints.forEach(function(j){
       b.lineCap = 'butt';
@@ -616,9 +624,10 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
   function drawNozzle(t){
     var s = W < 700 ? 0.8 : 1, lift = nozzle.lift || 0;
     nozzle.a += ((nozzle.y < 190 ? 0.72 : -0.72) - nozzle.a) * 0.08; // gun leans away from the header
+    nozzle.m = (nozzle.m || 1) + ((nozzle.x > W * 0.6 ? -1 : 1) - (nozzle.m || 1)) * 0.08; // and away from the side it's near
     var a = nozzle.a + Math.sin(t * 1.7) * 0.03;
     var sealed = window.ggSlab ? window.ggSlab.sealed() : 0;
-    g.save(); g.globalAlpha = nozzle.show; g.translate(nozzle.x, nozzle.y); g.rotate(a);
+    g.save(); g.globalAlpha = nozzle.show; g.translate(nozzle.x, nozzle.y); g.scale(Math.abs(nozzle.m) < 0.15 ? (nozzle.m < 0 ? -0.15 : 0.15) : nozzle.m, 1); g.rotate(a);
     // shadow on the slab; it drops further away while the gun is lifted between joints
     g.save(); g.shadowColor = 'rgba(40,36,30,.34)'; g.shadowBlur = (8 + 10 * lift) * DPR; // shadow offsets ignore the transform: screen space
     g.shadowOffsetX = (5 + 10 * lift) * DPR; g.shadowOffsetY = (8 + 14 * lift) * DPR;
@@ -683,9 +692,9 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
       g.setTransform(DPR, 0, 0, DPR, 0, 0); g.clearRect(0, 0, W, H);
       var cy = H / 2;
       g.fillStyle = 'rgba(70,64,56,.22)'; g.fillRect(0, cy - 6, W, 12);
-      g.fillStyle = '#57534b'; g.fillRect(0, cy - 4, W, 8); g.fillStyle = '#38352f'; g.fillRect(0, cy - 2.5, W, 5);
+      g.fillStyle = '#57534b'; g.fillRect(0, cy - 4.5, W, 9); g.fillStyle = '#34312c'; g.fillRect(0, cy - 3, W, 6);
       for (var i = 0; i < n; i++) { xs[i] = i * 4; ys[i] = cy; od[i] = d[i] * 0.18; wt[i] = Math.max(0, Math.min(1, 1 - (front - i) / 220)) + Math.min(0.6, Math.abs(d[i]) * 0.04); }
-      bead(g, xs, ys, n, f, wt, 7.5, t, 0, od);
+      bead(g, xs, ys, n, f, wt, 8, t, 0, od);
     }
     size(); window.addEventListener('resize', size);
     watch(seam, job); Loop.add(job);

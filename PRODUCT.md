@@ -21,7 +21,7 @@ A blue-collar crew that works around the clock. Their posted work (Facebook grou
 
 ## Brand commitments
 - Name exactly as written: "G&G Caulking Service LLC".
-- No logo and no brand colors exist. The palette comes from their own footage: twilight navy sky, concrete grey, caution-tape yellow (**inferred**).
+- No logo and no brand colors exist. The palette comes from their own footage: concrete grey ground, layout-marking orange (#ff5b14), chalk-line blue for focus, sealant grey, and twilight navy for the night section (**inferred** from the footage and the trade).
 - Tone: work-first, plain and short. "We" voice, because they write "We work 24/7".
 
 ## Evidence on hand
