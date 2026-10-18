@@ -24,7 +24,7 @@
   --ink:#1f2731;         /* charcoal-blue */
   --ink-2:#414b57;
   --paint:#ff5b14;       /* layout marking paint */
-  --paint-ink:#b33a06;   /* paint dark enough for text on concrete */
+  --paint-ink:#963003;   /* paint dark enough for text on concrete */
   --chalk:#2b6fd6;       /* chalk-line blue: form hover/focus */
   --groove:#4f4b44;
   --sealant:#7f8286;
@@ -76,7 +76,7 @@ a.phone:hover{color:var(--paint-ink)}
 .btn-line{background:transparent;color:var(--ink)}
 .btn-line:hover{background:rgba(31,39,49,.08)}
 .btn svg{width:20px;height:20px;flex:none}
-.hint{position:absolute;z-index:2;left:0;right:0;bottom:14px;text-align:center;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);pointer-events:none;opacity:.85;transition:opacity .6s}
+.hint{position:absolute;z-index:2;left:0;right:0;bottom:14px;text-align:center;font-size:15px;font-weight:700;color:var(--ink-2);pointer-events:none;opacity:.85;transition:opacity .6s}
 .hint.gone{opacity:0}
 
 /* ---------- Seams (section joints) ---------- */
@@ -224,10 +224,10 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div class="wrap">
       <h2>Our work</h2>
       <div class="grid" id="workGrid">
-        <figure class="tall"><img data-src="img-joint" alt="A sealed saw-cut joint running through a new concrete slab" draggable="false"></figure>
-        <figure class="sq"><img data-src="img-slab" alt="New concrete slab beside a commercial building at sunrise" draggable="false"></figure>
-        <figure class="sq"><img data-src="img-lot" alt="Finished concrete lot taped off with caution tape" draggable="false"></figure>
-        <figure class="wide"><img data-src="img-front" alt="Concrete lot in front of a new commercial building" draggable="false"></figure>
+        <figure class="tall"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-joint" alt="A sealed saw-cut joint running through a new concrete slab" draggable="false"></figure>
+        <figure class="sq"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-slab" alt="New concrete slab beside a commercial building at sunrise" draggable="false"></figure>
+        <figure class="sq"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-lot" alt="Finished concrete lot taped off with caution tape" draggable="false"></figure>
+        <figure class="wide"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-front" alt="Concrete lot in front of a new commercial building" draggable="false"></figure>
       </div>
       <a class="more" data-fb href="https://www.facebook.com/profile.php?id=100034139794307" rel="noopener">
         <svg class="fb" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#1877f2"/><path fill="#fff" d="M13.3 19.5v-6.2h2.1l.3-2.5h-2.4V9.3c0-.7.2-1.2 1.2-1.2h1.3V5.9c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3v1.8H8.6v2.5h2.1v6.2h2.6z"/></svg>
@@ -241,7 +241,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
   <section class="night" id="hours">
     <div class="wrap cols">
-      <figure><img data-src="img-night" alt="The concrete slab at night with a bucket of sealant on the job" draggable="false"></figure>
+      <figure><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="img-night" alt="The concrete slab at night with a bucket of sealant on the job" draggable="false"></figure>
       <div>
         <h2>Day or night. <em>24/7.</em></h2>
         <p>Your lot can't close for a day while we work. So we come when it's empty: overnight, before you open, or on a weekend.</p>
@@ -412,7 +412,7 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
   var hero = document.getElementById('hero'), cv = document.getElementById('slab'), g = cv.getContext('2d');
   var copy = document.getElementById('heroCopy'), head = document.querySelector('.top .wrap'), hint = document.getElementById('hint');
   var base = document.createElement('canvas'), bg = base.getContext('2d');
-  var W = 0, H = 0, DPR = 1, JW = 5, joints = [], nozzle = { x: 0, y: 0, a: 0, show: 0, on: false }, auto = null, doneAt = 0, fade = 1, slabSeed = 7, touched = false;
+  var W = 0, H = 0, DPR = 1, JW = 5, joints = [], nozzle = { x: 0, y: 0, a: -0.72, show: 0, on: false }, auto = null, doneAt = 0, fade = 1, slabSeed = 7, touched = false;
   var job = { visible: false, tick: tick };
 
   function rect(el, pad){ var h = hero.getBoundingClientRect(), b = el.getBoundingClientRect(); return { l: b.left - h.left - pad, t: b.top - h.top - pad, r: b.right - h.left + pad, b: b.bottom - h.top + pad }; }
@@ -425,7 +425,7 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
     JW = W < 700 ? 5 : 6;
     var gap = W < 700 ? JOINT_GAP_PHONE : JOINT_GAP_DESK;
     var hd = rect(head, 8), hn = rect(hint, 10);
-    var ex = [rect(copy, 18), { l: -1, t: -1, r: W + 1, b: hd.b }, { l: -1, t: hn.t, r: W + 1, b: hn.b }];
+    var ex = [rect(copy, 18), { l: -1, t: -1, r: W + 1, b: hd.b + 40 }, { l: -1, t: hn.t, r: W + 1, b: hn.b }];
     var c = ex[0];
     // Grid anchored to the text block so no joint runs through the words.
     var ay = c.b + 8, ax = (c.r < W - gap * 0.7) ? c.r + 8 : W / 2;
@@ -587,7 +587,9 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
   }
 
   function drawNozzle(t){
-    var s = W < 700 ? 0.85 : 1, a = -0.72 + Math.sin(t * 1.7) * 0.03;
+    var s = W < 700 ? 0.85 : 1;
+    nozzle.a += ((nozzle.y < 190 ? 0.72 : -0.72) - nozzle.a) * 0.08; // tube leans away from the header
+    var a = nozzle.a + Math.sin(t * 1.7) * 0.03;
     g.save(); g.globalAlpha = nozzle.show; g.translate(nozzle.x, nozzle.y); g.rotate(a);
     // soft shadow on the slab
     g.save(); g.rotate(-a); g.translate(14 * s, 10 * s); g.rotate(a);

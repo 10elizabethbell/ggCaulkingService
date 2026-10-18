@@ -5,3 +5,5 @@ src-assets/
 .claude-claimed
 .shoot-*
 .pitch-site-done
+.impeccable/*
+!.impeccable/config.json
