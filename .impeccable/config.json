@@ -119,6 +119,12 @@
         "value": "clamp(17px,4.6vw,20px)",
         "createdAt": "2026-10-18T04:02:00.899Z",
         "reason": "documented one-off in DESIGN.md component notes; shipped value DESIGN.md was derived from (documenter chose not to tokenize single-use values)"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "20px",
+        "createdAt": "2026-10-18T04:02:07.063Z",
+        "reason": "hero promise fluid max: Ellie set the one-line pitch to 20px max (ellie-taste.md §2)"
       }
     ]
   }
