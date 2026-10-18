@@ -62,7 +62,7 @@ section{padding:72px 0 72px}
 
 /* ---------- Hero ---------- */
 .hero{position:relative;min-height:clamp(620px,100svh,980px);padding:96px 0 0;overflow:hidden;background:var(--slab) var(--noise)}
-.hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block;-webkit-mask-image:linear-gradient(to bottom,#000 calc(100% - 110px),transparent);mask-image:linear-gradient(to bottom,#000 calc(100% - 110px),transparent)}
 .hero-copy{position:relative;z-index:2;max-width:640px}
 .hero h1{font-size:clamp(2.9rem,13.2vw,6rem);line-height:.9;letter-spacing:-.035em}
 .hero h1 em{font-style:normal;color:var(--paint-ink)}
@@ -174,8 +174,9 @@ footer .fine{margin-top:20px;font-size:14px;color:#aab2bd}
   .btns{grid-template-columns:auto auto;justify-content:start}
   .mark span{font-size:17px}
   .phone{font-size:18px}
-  .work .grid{grid-template-columns:repeat(3,1fr);gap:9px}
-  .work .sq{aspect-ratio:3/4}
+  .work .grid{grid-template-columns:repeat(5,1fr);grid-auto-rows:clamp(300px,26vw,350px);gap:9px} /* one row: no still shown past its native size */
+  .work .tall,.work .sq{grid-row:auto;aspect-ratio:auto}
+  .work .wide{order:-1}
   .work .wide{grid-column:span 2;aspect-ratio:auto}
   .more{display:inline-flex;padding-right:14px}
   .night figure{max-width:520px;aspect-ratio:4/3}
@@ -189,8 +190,6 @@ footer .fine{margin-top:20px;font-size:14px;color:#aab2bd}
   .night figure{max-width:none}
   .steps ol{grid-template-columns:repeat(3,1fr);gap:28px}
   .steps li:last-child{border-bottom:0}
-  .estimate .wrap{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
-  .estimate .wrap>div:first-child{position:sticky;top:48px}
   footer .wrap{display:flex;justify-content:space-between;align-items:flex-end}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.work img,.night img{transition:none}}
@@ -389,9 +388,14 @@ function rng(seed){ return function(){ seed = (seed * 16807) % 2147483647; retur
 function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
   var i = 0;
   function Y(k){ return ys[k] + (off ? off[k] : 0); }
+  // hand-tooled: the bead swells and thins a little along its length
   function run(s, e, width, color, cap){
-    g.strokeStyle = color; g.lineCap = cap ? 'round' : 'butt'; g.lineJoin = 'round';
-    g.lineWidth = width; g.beginPath(); g.moveTo(xs[s], Y(s)); for (var k = s + 1; k <= e; k++) g.lineTo(xs[k], Y(k)); g.stroke();
+    g.strokeStyle = color; g.fillStyle = color; g.lineCap = 'butt';
+    for (var k = s; k < e; k++) {
+      g.lineWidth = width * (1 + 0.07 * Math.sin(k * 0.37 + ph) + 0.04 * Math.sin(k * 0.11 + ph * 2));
+      g.beginPath(); g.moveTo(xs[k] - (xs[k + 1] - xs[k]) * 0.04, Y(k) - (Y(k + 1) - Y(k)) * 0.04); g.lineTo(xs[k + 1], Y(k + 1)); g.stroke();
+    }
+    if (cap) { g.beginPath(); g.arc(xs[s], Y(s), width / 2, 0, 6.29); g.fill(); g.beginPath(); g.arc(xs[e], Y(e), width / 2, 0, 6.29); g.fill(); }
   }
   while (i < n - 1) {
     if (Math.min(f[i], f[i + 1]) < 0.08) { i++; continue; }
@@ -401,7 +405,8 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
     var c = Math.round(124 - 26 * wv), W = JW * (0.75 + 0.5 * Math.min(1, fv)) + Math.max(0, fv - 1) * 2;
     var cap = true;
     // body: dark edge where it meets the concrete, the bead, then a soft rounded crown
-    run(s, e, W + 1.6, 'rgb(' + (c - 34) + ',' + (c - 32) + ',' + (c - 28) + ')', cap);
+    run(s, e, W + 4, 'rgba(' + (c - 40) + ',' + (c - 38) + ',' + (c - 34) + ',.16)', cap);   // feathered smear onto the concrete
+    run(s, e, W + 1.4, 'rgba(' + (c - 30) + ',' + (c - 28) + ',' + (c - 24) + ',.7)', cap);
     run(s, e, W * 0.82, 'rgb(' + c + ',' + (c + 3) + ',' + (c + 7) + ')', cap);
     run(s, e, W * 0.42, 'rgba(' + (c + 26) + ',' + (c + 29) + ',' + (c + 33) + ',' + (0.55 + 0.25 * wv).toFixed(2) + ')', cap);
     // while wet, a dull shine breathes along it
@@ -475,7 +480,7 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
     for (i = 0; i < mots; i++) {
       var mx = r() * W, my = r() * H, mr = 8 + r() * 46, md = r() < 0.55;
       var mg = b.createRadialGradient(mx, my, 0, mx, my, mr);
-      mg.addColorStop(0, md ? 'rgba(110,102,90,' + (0.05 + r() * 0.07) + ')' : 'rgba(246,243,236,' + (0.06 + r() * 0.08) + ')'); mg.addColorStop(1, 'rgba(0,0,0,0)');
+      mg.addColorStop(0, md ? 'rgba(110,102,90,' + (0.03 + r() * 0.045) + ')' : 'rgba(246,243,236,' + (0.04 + r() * 0.06) + ')'); mg.addColorStop(1, 'rgba(0,0,0,0)');
       b.fillStyle = mg; b.fillRect(mx - mr, my - mr, mr * 2, mr * 2);
     }
     // Broom finish: broken, wavering drags of uneven spacing and weight
@@ -674,7 +679,7 @@ function bead(g, xs, ys, n, f, wet, JW, t, ph, off){
       if (REDUCED) { f.fill(1); draw(0); }
     }
     function tick(t, dt){
-      if (started && front < n + 4) front += dt * (90 + 70 * Math.sin(t * 2.3)) / 4 * (W < 700 ? 1 : 2.2);
+      if (started && front < n + 4) front += dt * n * (0.9 + 0.35 * Math.sin(t * 2.3)); // runs the width in about a second, then holds full
       for (var i = 0; i < n; i++) { var target = i < front - 6 ? 1 : i < front ? (front - i) / 6 : 0; f[i] += (target - f[i]) * Math.min(1, dt * 8); }
       var r = cv.getBoundingClientRect(), lx = P.x - r.left, ly = P.y - r.top, near = P.active && ly > -40 && ly < H + 40;
       for (i = 0; i < n; i++) {
