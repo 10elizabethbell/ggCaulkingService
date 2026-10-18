@@ -1,0 +1,425 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-18T04:00:28+00:00",
+  "title": "Design System: G&G Caulking Service LLC",
+  "extensions": {
+    "colorMeta": {
+      "slab": {
+        "role": "neutral",
+        "displayName": "Broom-Finished Concrete",
+        "canonical": "oklch(83.7% 0.013 87)",
+        "tonalRamp": [
+          "oklch(15% 0.008 87)",
+          "oklch(25% 0.008 87)",
+          "oklch(35% 0.013 87)",
+          "oklch(48% 0.013 87)",
+          "oklch(60% 0.013 87)",
+          "oklch(72% 0.013 87)",
+          "oklch(84% 0.013 87)",
+          "oklch(95% 0.008 87)"
+        ]
+      },
+      "slab-2": {
+        "role": "neutral",
+        "displayName": "Wet Concrete",
+        "canonical": "oklch(79.0% 0.015 85)",
+        "tonalRamp": [
+          "oklch(15% 0.009 85)",
+          "oklch(25% 0.009 85)",
+          "oklch(35% 0.015 85)",
+          "oklch(48% 0.015 85)",
+          "oklch(60% 0.015 85)",
+          "oklch(72% 0.015 85)",
+          "oklch(84% 0.015 85)",
+          "oklch(95% 0.009 85)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Charcoal-Blue Ink",
+        "canonical": "oklch(27.0% 0.022 254)",
+        "tonalRamp": [
+          "oklch(15% 0.013 254)",
+          "oklch(25% 0.013 254)",
+          "oklch(35% 0.022 254)",
+          "oklch(48% 0.022 254)",
+          "oklch(60% 0.022 254)",
+          "oklch(72% 0.022 254)",
+          "oklch(84% 0.022 254)",
+          "oklch(95% 0.013 254)"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Weathered Ink",
+        "canonical": "oklch(40.9% 0.024 253)",
+        "tonalRamp": [
+          "oklch(15% 0.014 253)",
+          "oklch(25% 0.014 253)",
+          "oklch(35% 0.024 253)",
+          "oklch(48% 0.024 253)",
+          "oklch(60% 0.024 253)",
+          "oklch(72% 0.024 253)",
+          "oklch(84% 0.024 253)",
+          "oklch(95% 0.014 253)"
+        ]
+      },
+      "paint": {
+        "role": "primary",
+        "displayName": "Layout-Marking Orange",
+        "canonical": "oklch(68.3% 0.211 39)",
+        "tonalRamp": [
+          "oklch(15% 0.108 39)",
+          "oklch(25% 0.108 39)",
+          "oklch(35% 0.180 39)",
+          "oklch(48% 0.180 39)",
+          "oklch(60% 0.180 39)",
+          "oklch(72% 0.180 39)",
+          "oklch(84% 0.180 39)",
+          "oklch(95% 0.108 39)"
+        ]
+      },
+      "paint-ink": {
+        "role": "primary",
+        "displayName": "Burnt Paint",
+        "canonical": "oklch(45.7% 0.145 39)",
+        "tonalRamp": [
+          "oklch(15% 0.087 39)",
+          "oklch(25% 0.087 39)",
+          "oklch(35% 0.145 39)",
+          "oklch(48% 0.145 39)",
+          "oklch(60% 0.145 39)",
+          "oklch(72% 0.145 39)",
+          "oklch(84% 0.145 39)",
+          "oklch(95% 0.087 39)"
+        ]
+      },
+      "chalk": {
+        "role": "secondary",
+        "displayName": "Chalk-Line Blue",
+        "canonical": "oklch(38.7% 0.133 261)",
+        "tonalRamp": [
+          "oklch(15% 0.072 261)",
+          "oklch(25% 0.072 261)",
+          "oklch(35% 0.120 261)",
+          "oklch(48% 0.120 261)",
+          "oklch(60% 0.120 261)",
+          "oklch(72% 0.120 261)",
+          "oklch(84% 0.120 261)",
+          "oklch(95% 0.072 261)"
+        ]
+      },
+      "groove": {
+        "role": "neutral",
+        "displayName": "Saw-Cut Groove",
+        "canonical": "oklch(41.4% 0.013 82)",
+        "tonalRamp": [
+          "oklch(15% 0.008 82)",
+          "oklch(25% 0.008 82)",
+          "oklch(35% 0.013 82)",
+          "oklch(48% 0.013 82)",
+          "oklch(60% 0.013 82)",
+          "oklch(72% 0.013 82)",
+          "oklch(84% 0.013 82)",
+          "oklch(95% 0.008 82)"
+        ]
+      },
+      "sealant": {
+        "role": "neutral",
+        "displayName": "Sealant Grey",
+        "canonical": "oklch(60.5% 0.007 255)",
+        "tonalRamp": [
+          "oklch(15% 0.004 255)",
+          "oklch(25% 0.004 255)",
+          "oklch(35% 0.007 255)",
+          "oklch(48% 0.007 255)",
+          "oklch(60% 0.007 255)",
+          "oklch(72% 0.007 255)",
+          "oklch(84% 0.007 255)",
+          "oklch(95% 0.004 255)"
+        ]
+      },
+      "night": {
+        "role": "tertiary",
+        "displayName": "Twilight Navy",
+        "canonical": "oklch(25.7% 0.047 261)",
+        "tonalRamp": [
+          "oklch(15% 0.028 261)",
+          "oklch(25% 0.028 261)",
+          "oklch(35% 0.047 261)",
+          "oklch(48% 0.047 261)",
+          "oklch(60% 0.047 261)",
+          "oklch(72% 0.047 261)",
+          "oklch(84% 0.047 261)",
+          "oklch(95% 0.028 261)"
+        ]
+      },
+      "night-2": {
+        "role": "tertiary",
+        "displayName": "Navy Shadow",
+        "canonical": "oklch(31.7% 0.053 260)",
+        "tonalRamp": [
+          "oklch(15% 0.032 260)",
+          "oklch(25% 0.032 260)",
+          "oklch(35% 0.053 260)",
+          "oklch(48% 0.053 260)",
+          "oklch(60% 0.053 260)",
+          "oklch(72% 0.053 260)",
+          "oklch(84% 0.053 260)",
+          "oklch(95% 0.032 260)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Site White",
+        "canonical": "oklch(98.5% 0.004 91)",
+        "tonalRamp": [
+          "oklch(15% 0.002 91)",
+          "oklch(25% 0.002 91)",
+          "oklch(35% 0.004 91)",
+          "oklch(48% 0.004 91)",
+          "oklch(60% 0.004 91)",
+          "oklch(72% 0.004 91)",
+          "oklch(84% 0.004 91)",
+          "oklch(95% 0.002 91)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero h1 only; uppercase, one emphasis word in Burnt Paint."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section h2s, uppercase."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Step and result-card headings, uppercase."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Paragraph under a headline; hero promise uses clamp(17px, 4.6vw, 20px) at 1.45."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Form labels, legends, hero hint."
+      }
+    },
+    "shadows": [
+      {
+        "name": "pressed-block",
+        "value": "0 3px 8px -3px rgba(31,39,49,.45)",
+        "purpose": "GG mark block."
+      },
+      {
+        "name": "primary-lift",
+        "value": "0 8px 18px -10px rgba(31,39,49,.55)",
+        "purpose": "Paint-filled primary button."
+      },
+      {
+        "name": "slab-resting-card",
+        "value": "0 14px 26px -16px rgba(31,39,49,.8)",
+        "purpose": "Facebook row."
+      },
+      {
+        "name": "night-photo",
+        "value": "0 26px 50px -26px rgba(0,0,0,.7)",
+        "purpose": "Night still on navy."
+      }
+    ],
+    "motion": [
+      {
+        "name": "press",
+        "value": "transform .15s; translateY(1px) on :active",
+        "purpose": "Button press."
+      },
+      {
+        "name": "state-colour",
+        "value": "background-color .2s, color .2s",
+        "purpose": "Hover colour changes, gated behind (hover:hover)."
+      },
+      {
+        "name": "photo-in",
+        "value": "opacity .5s",
+        "purpose": "Lazy-loaded stills fade in."
+      },
+      {
+        "name": "hint-out",
+        "value": "opacity .6s",
+        "purpose": "Hero hint fades after first interaction."
+      },
+      {
+        "name": "seam-fill",
+        "value": "~1s fill front, damped spring (k 38, c 6.5) under pointer",
+        "purpose": "Section seams fill on first view and give under the pointer."
+      },
+      {
+        "name": "slab-tuning",
+        "value": "JOINT_GAP 130/190px, NOZZLE_RATE 30, FLOW 16, AUTO_SPEED 120/300px/s, IDLE_RESUME 3000ms",
+        "purpose": "Hero caulk-gun constants at the top of the script."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "Loop never starts; seams render pre-filled; transitions removed."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "tablet",
+        "value": "760px"
+      },
+      {
+        "name": "desktop",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Fill Button (primary)",
+      "kind": "button",
+      "refersTo": "button-fill",
+      "description": "The single primary action: paint ground, ink edge.",
+      "html": "<a class=\"ds-btn ds-btn-fill\" href=\"#\">Get a free estimate</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 22px;border-radius:12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-weight:800;font-size:17px;text-decoration:none;cursor:pointer;border:2px solid var(--ink,#1f2731);transition:transform .15s,background-color .2s,color .2s}.ds-btn:active{transform:translateY(1px)}.ds-btn-fill{background:var(--paint,#ff5b14);color:var(--ink,#1f2731);box-shadow:0 8px 18px -10px rgba(31,39,49,.55)}@media (hover:hover){.ds-btn-fill:hover{background:#ff7034}}.ds-btn-fill:focus-visible{outline:3px solid var(--chalk,#163f8a);outline-offset:3px}"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Secondary action on concrete: transparent with ink edge.",
+      "html": "<a class=\"ds-btn ds-btn-line\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1z\"/></svg>Message us on Facebook</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 22px;border-radius:12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-weight:800;font-size:17px;text-decoration:none;cursor:pointer;border:2px solid var(--ink,#1f2731);transition:transform .15s,background-color .2s,color .2s}.ds-btn:active{transform:translateY(1px)}.ds-btn-line{background:transparent;color:var(--ink,#1f2731)}@media (hover:hover){.ds-btn-line:hover{background:rgba(31,39,49,.08)}}.ds-btn-line:focus-visible{outline:3px solid var(--chalk,#163f8a);outline-offset:3px}"
+    },
+    {
+      "name": "Send Button",
+      "kind": "button",
+      "refersTo": "button-send",
+      "description": "Full-width ink submit on the paint estimate ground.",
+      "html": "<div style=\"background:#ff5b14;padding:20px\"><button class=\"ds-btn ds-btn-send\">Write my message for Facebook</button></div>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 22px;border-radius:12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-weight:800;font-size:17px;text-decoration:none;cursor:pointer;border:2px solid var(--ink,#1f2731);transition:transform .15s,background-color .2s,color .2s}.ds-btn:active{transform:translateY(1px)}.ds-btn-send{background:var(--ink,#1f2731);color:var(--white,#fbfaf7);width:100%}.ds-btn-send:hover,.ds-btn-send:focus-visible{outline:3px solid var(--chalk,#163f8a);outline-offset:2px;background:#2b3542}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "White field, 2px ink edge; one chalk outline on hover/focus.",
+      "html": "<div style=\"background:#ff5b14;padding:20px\"><label class=\"ds-label\" for=\"ds-f\">Your name</label><input class=\"ds-input\" id=\"ds-f\" type=\"text\"></div>",
+      "css": ".ds-label{display:block;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-weight:800;font-size:15px;color:#1f2731;margin-bottom:6px}.ds-input{width:100%;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:17px;color:var(--ink,#1f2731);background:var(--white,#fbfaf7);border:2px solid var(--ink,#1f2731);border-radius:10px;padding:13px 14px;min-height:52px;transition:outline-color .15s}.ds-input:hover,.ds-input:focus{outline:3px solid var(--chalk,#163f8a);outline-offset:1px}"
+    },
+    {
+      "name": "Time Chips",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Radio chips; selected fills ink.",
+      "html": "<div class=\"ds-chips\"><input type=\"radio\" name=\"ds-w\" id=\"ds-w1\" checked><label for=\"ds-w1\">Any time</label><input type=\"radio\" name=\"ds-w\" id=\"ds-w2\"><label for=\"ds-w2\">Nights</label><input type=\"radio\" name=\"ds-w\" id=\"ds-w3\"><label for=\"ds-w3\">Weekends</label></div>",
+      "css": ".ds-chips{display:flex;flex-wrap:wrap;gap:8px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}.ds-chips input{position:absolute;opacity:0;width:1px;height:1px}.ds-chips label{display:flex;align-items:center;min-height:46px;padding:0 16px;border:2px solid var(--ink,#1f2731);border-radius:10px;background:var(--white,#fbfaf7);color:#1f2731;cursor:pointer;font-weight:700}.ds-chips label:hover,.ds-chips input:focus-visible+label{outline:3px solid var(--chalk,#163f8a);outline-offset:1px}.ds-chips input:checked+label{background:var(--ink,#1f2731);color:var(--white,#fbfaf7)}"
+    },
+    {
+      "name": "Facebook Row",
+      "kind": "card",
+      "refersTo": "facebook-row",
+      "description": "Ink slab linking out; only the arrow reacts to hover.",
+      "html": "<a class=\"ds-more\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"30\" height=\"30\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"12\" fill=\"#1877f2\"/><path fill=\"#fff\" d=\"M13.3 19.5v-6.2h2.1l.3-2.5h-2.4V9.3c0-.7.2-1.2 1.2-1.2h1.3V5.9c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3v1.8H8.6v2.5h2.1v6.2h2.6z\"/></svg><span class=\"ds-more-txt\">Click to see more of our work.</span><span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\"><path d=\"M5 12h13m-5-6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></a>",
+      "css": ".ds-more{display:inline-flex;align-items:center;gap:14px;padding:16px 14px 16px 18px;min-height:64px;border-radius:12px;background:var(--ink,#1f2731);color:var(--white,#fbfaf7);text-decoration:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-weight:800;font-size:18px;box-shadow:0 14px 26px -16px rgba(31,39,49,.8)}.ds-more-txt{flex:1;line-height:1.25}.ds-arrow{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:rgba(251,250,247,.14);transition:background-color .2s,color .2s}@media (hover:hover){.ds-more:hover .ds-arrow{background:var(--paint,#ff5b14);color:var(--ink,#1f2731)}}.ds-more:focus-visible{outline:none}.ds-more:focus-visible .ds-arrow{background:var(--paint,#ff5b14);color:var(--ink,#1f2731);outline:3px solid var(--paint,#ff5b14);outline-offset:3px}"
+    },
+    {
+      "name": "Header Wordmark",
+      "kind": "nav",
+      "refersTo": "mark-block",
+      "description": "GG paint block with stacked uppercase name; phone slot opposite.",
+      "html": "<div class=\"ds-top\"><a class=\"ds-mark\" href=\"#\"><b>G&amp;G</b><span>Caulking<small>Service LLC</small></span></a><span class=\"ds-phone\">Open 24/7</span></div>",
+      "css": ".ds-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;background:var(--slab,#cdc9c0);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:#1f2731}.ds-mark{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;font-weight:900;text-transform:uppercase;letter-spacing:.01em;line-height:1}.ds-mark b{display:grid;place-items:center;width:44px;height:44px;border-radius:9px;background:var(--paint,#ff5b14);color:var(--ink,#1f2731);font-size:17px;letter-spacing:-.04em;box-shadow:0 3px 8px -3px rgba(31,39,49,.45)}.ds-mark span{font-size:15px}.ds-mark small{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--ink-2,#414b57);margin-top:3px}.ds-mark:focus-visible{outline:3px solid var(--chalk,#163f8a);outline-offset:3px}.ds-phone{font-weight:800;font-size:14px;color:var(--ink-2,#414b57);min-height:44px;display:flex;align-items:center}"
+    },
+    {
+      "name": "Section Seam",
+      "kind": "custom",
+      "refersTo": "seam",
+      "description": "Static rendering of the sealed joint between two section grounds (live version is a canvas).",
+      "html": "<div class=\"ds-seam\"><i></i></div>",
+      "css": ".ds-seam{position:relative;height:34px;background:linear-gradient(to bottom,var(--slab,#cdc9c0) 50%,var(--night,#16233a) 50%)}.ds-seam i{position:absolute;left:0;right:0;top:11px;height:12px;background:rgba(70,64,56,.22)}.ds-seam i::before{content:'';position:absolute;left:0;right:0;top:1.5px;height:9px;background:#57534b}.ds-seam i::after{content:'';position:absolute;left:0;right:0;top:3px;height:6px;border-radius:3px;background:linear-gradient(to bottom,#7f8286,#a3a6aa 50%,#7f8286)}"
+    },
+    {
+      "name": "Step Row",
+      "kind": "custom",
+      "refersTo": "step",
+      "description": "Numbered step between 5px groove rules.",
+      "html": "<ol class=\"ds-steps\"><li><span class=\"n\">1</span><h3>Tell us about the job</h3><p>Fill in the form below.</p></li></ol>",
+      "css": ".ds-steps{list-style:none;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:#1f2731;background:var(--slab,#cdc9c0)}.ds-steps li{display:grid;grid-template-columns:52px 1fr;gap:4px 14px;padding:20px 0;border-top:5px solid var(--groove,#4f4b44);border-bottom:5px solid var(--groove,#4f4b44)}.ds-steps .n{grid-row:span 2;font-size:44px;font-weight:900;line-height:.9;color:var(--paint-ink,#963003)}.ds-steps h3{margin:0;font-size:22px;font-weight:900;text-transform:uppercase;line-height:1.05;letter-spacing:-.02em;padding-top:4px}.ds-steps p{margin:0;color:var(--ink-2,#414b57);font-size:17px;line-height:1.55}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Marked-Up Slab",
+    "overview": "The page is the pour G&G seals. Its ground is broom-finished concrete with a fine grain over it, cut into panels by saw-cut joints, marked with hand-sprayed layout-paint ticks, and sealed with grey beads that go in while you watch. Everything else on the page borrows from that job site: orange paint for the one thing you should do, chalk-line blue for the thing you're touching, sealant grey in the gaps, and twilight navy when the copy turns to night work.\n\nIt is built for a phone held in one hand, inside Facebook's in-app browser. The type is heavy, uppercase and set tight, the house style for these pitch sites. Controls are big (44px at the smallest, 56px for buttons) and edged in solid ink. Depth comes from the material itself (grooves, beads, grain) more than from shadows. The hero and the joints between sections are live canvases. A caulk gun runs on its own and follows the mouse or finger when someone takes over, and the same bead renderer fills every section seam.\n\nIt rejects the usual contractor template of a stock hero photo with rows of icon cards. The only photos are the crew's own stills, and they sit in a grid whose gaps are sealed joints.",
+    "keyCharacteristics": [
+      "Concrete ground (slab + fractal-noise grain) on every light section; navy for the night section; paint orange for the estimate section.",
+      "One orange: layout-paint marks, the primary button, the GG mark block and the estimate ground.",
+      "Heavy uppercase system lettering (900 weight, tight leading, negative tracking) for every heading.",
+      "Joints everywhere: saw-cut grooves in the hero, sealed seams between sections, 5px groove rules in the steps, sealed gaps in the photo grid.",
+      "Solid 2px ink borders on every control; chalk-blue outline is the only hover/focus signal on form controls."
+    ],
+    "rules": [
+      {
+        "name": "The One Paint Rule",
+        "body": "Orange is layout paint: it marks the joints, the single primary action and the estimate ground. It never fills body text on concrete; use Burnt Paint when orange has to be read.",
+        "section": "colors"
+      },
+      {
+        "name": "The Chalk Means Touch Rule",
+        "body": "Chalk blue appears only when something is being hovered or focused. On ink or navy grounds, where chalk would vanish, the focus ring switches to paint orange (footer links, the Facebook row's arrow).",
+        "section": "colors"
+      },
+      {
+        "name": "The Stencil Heading Rule",
+        "body": "Every heading (h1–h3) is 900 weight, uppercase, with negative tracking, sub-1 leading and `text-wrap: balance`. Nothing else on the page is uppercase except the wordmark and the footer name.",
+        "section": "typography"
+      },
+      {
+        "name": "The Plain Body Rule",
+        "body": "Body copy never goes uppercase, never goes below 15px, and never runs past about 32em.",
+        "section": "typography"
+      },
+      {
+        "name": "The Seam Not Margin Rule",
+        "body": "Sections meet at a sealed joint. Do not separate them with whitespace alone, a hairline, or a gradient fade.",
+        "section": "layout"
+      },
+      {
+        "name": "The Uncut Pour Rule",
+        "body": "Text never sits across a joint. The slab's joint grid is laid out around the copy, not the other way round.",
+        "section": "layout"
+      },
+      {
+        "name": "The Material Depth Rule",
+        "body": "Reach for groove, bead and grain before a shadow. Shadows are soft, negative-spread and ink-tinted; never hard-offset.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do put every light section on slab plus the noise grain, and join sections with a seam whose halves match the grounds on either side.",
+      "Do keep orange to marks, the single primary action, the GG block and the estimate ground. Use Burnt Paint (paint-ink) when orange must be read as text on concrete.",
+      "Do signal hover and focus on form controls with one 3px chalk outline, and switch the ring to paint on ink or navy grounds.",
+      "Do put hover colour changes inside `@media (hover:hover)`, so they don't stick after a tap.",
+      "Do set every heading in the system stack at 900, uppercase, tight leading, negative tracking, balanced.",
+      "Do keep touch targets at 44px or more (buttons 56px, fields 52px, chips 46px) with 2px ink borders.",
+      "Do route anything phone-dependent through the single `PHONE` constant, and expose new canvas behaviour as named tuning constants at the top of the script.",
+      "Do honour `prefers-reduced-motion`: seams render pre-filled and static, the animation loop never starts, transitions are removed."
+    ],
+    "donts": [
+      "Don't let a joint, groove or bead cross text; lay the grid out around the copy.",
+      "Don't use a stock hero photo, icon cards, or any imagery that isn't the crew's own work.",
+      "Don't add border changes, glows or background shifts on top of the chalk outline for field hover or focus.",
+      "Don't recolour the whole Facebook row on hover; only the arrow changes.",
+      "Don't use hard offset shadows or heavy elevation; depth comes from the material.",
+      "Don't introduce a second accent hue or a webfont for display type.",
+      "Don't set orange (#ff5b14) as text on concrete or white."
+    ]
+  }
+}

@@ -7,3 +7,4 @@ src-assets/
 .pitch-site-done
 .impeccable/*
 !.impeccable/config.json
+!.impeccable/design.json
