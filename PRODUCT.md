@@ -1,7 +1,7 @@
 # PRODUCT — G&G Caulking Service LLC
 
 - **Platform:** web
-- **Stack:** static single-file HTML/CSS/JS (no framework, no tracking), hosted on GitHub Pages
+- **Stack:** static single-file HTML/CSS/JS (no framework, no tracking; Cal Sans from Google Fonts is the only external resource), hosted on GitHub Pages
 - **Surface mode:** Persuade (one-page site)
 
 ## Users
@@ -21,7 +21,7 @@ A blue-collar crew that works around the clock. Their posted work (Facebook grou
 
 ## Brand commitments
 - Name exactly as written: "G&G Caulking Service LLC".
-- No logo and no brand colors exist. The palette comes from their own footage: concrete grey ground, layout-marking orange (#ff5b14), chalk-line blue for focus, sealant grey, and twilight navy for the night section (**inferred** from the footage and the trade).
+- No logo and no brand colors exist. Since the 2026-10-19 revamp the page uses the house calm band style: off-white paper, twilight navy (#1d3f73) and deep navy (#0f2140) taken from the sky in their job video, and caution-tape yellow (#ffd23f) from the same lot as the one accent (**inferred** from the footage; no brand to follow). Headings in Cal Sans.
 - Tone: work-first, plain and short. "We" voice, because they write "We work 24/7".
 
 ## Evidence on hand
