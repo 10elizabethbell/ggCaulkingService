@@ -4,12 +4,6 @@
     "ignoreFiles": [],
     "ignoreValues": [
       {
-        "rule": "overused-font",
-        "value": "roboto",
-        "createdAt": "2026-10-18T03:41:38.712Z",
-        "reason": "pitch-site house style (Ellie's ellie-taste.md): system font stack on every pitch site"
-      },
-      {
         "rule": "cramped-padding",
         "value": "*",
         "files": [
@@ -20,111 +14,12 @@
       },
       {
         "rule": "design-system-color",
-        "value": "rgb(116, 119, 123)",
-        "createdAt": "2026-10-18T04:01:59.758Z",
-        "reason": "documented one-off in DESIGN.md component notes; shipped value DESIGN.md was derived from (documenter chose not to tokenize single-use values)"
-      },
-      {
-        "rule": "design-system-color",
-        "value": "rgb(217, 223, 232)",
-        "createdAt": "2026-10-18T04:01:59.831Z",
-        "reason": "documented one-off in DESIGN.md component notes; shipped value DESIGN.md was derived from (documenter chose not to tokenize single-use values)"
-      },
-      {
-        "rule": "design-system-color",
-        "value": "rgb(56, 25, 10)",
-        "createdAt": "2026-10-18T04:01:59.901Z",
-        "reason": "documented one-off in DESIGN.md component notes; shipped value DESIGN.md was derived from (documenter chose not to tokenize single-use values)"
-      },
-      {
-        "rule": "design-system-color",
-        "value": "rgb(170, 178, 189)",
-        "createdAt": "2026-10-18T04:01:59.973Z",
-        "reason": "documented one-off in DESIGN.md component notes; shipped value DESIGN.md was derived from (documenter chose not to tokenize single-use values)"
-      },
-      {
-        "rule": "design-system-color",
-        "value": "#6b6f75",
-        "createdAt": "2026-10-18T04:02:00.046Z",
-        "reason": "documented one-off in DESIGN.md component notes; shipped value DESIGN.md was derived from (documenter chose not to tokenize single-use values)"
-      },
-      {
-        "rule": "design-system-color",
-        "value": "#5a0d00",
-        "createdAt": "2026-10-18T04:02:00.116Z",
-        "reason": "documented one-off in DESIGN.md component notes; shipped value DESIGN.md was derived from (documenter chose not to tokenize single-use values)"
-      },
-      {
-        "rule": "design-system-color",
-        "value": "#7a1200",
-        "createdAt": "2026-10-18T04:02:00.188Z",
-        "reason": "documented one-off in DESIGN.md component notes; shipped value DESIGN.md was derived from (documenter chose not to tokenize single-use values)"
-      },
-      {
-        "rule": "design-system-color",
-        "value": "#fff3ee",
-        "createdAt": "2026-10-18T04:02:00.259Z",
-        "reason": "documented one-off in DESIGN.md component notes; shipped value DESIGN.md was derived from (documenter chose not to tokenize single-use values)"
-      },
-      {
-        "rule": "design-system-color",
-        "value": "#2b3542",
-        "createdAt": "2026-10-18T04:02:00.326Z",
-        "reason": "documented one-off in DESIGN.md component notes; shipped value DESIGN.md was derived from (documenter chose not to tokenize single-use values)"
-      },
-      {
-        "rule": "design-system-color",
-        "value": "#ff7034",
-        "createdAt": "2026-10-18T04:02:00.398Z",
-        "reason": "documented one-off in DESIGN.md component notes; shipped value DESIGN.md was derived from (documenter chose not to tokenize single-use values)"
-      },
-      {
-        "rule": "design-system-color",
-        "value": "#000",
-        "createdAt": "2026-10-18T04:02:00.469Z",
-        "reason": "mask-image gradient stop on the hero canvas, not a rendered colour"
-      },
-      {
-        "rule": "design-system-radius",
-        "value": "2px",
-        "createdAt": "2026-10-18T04:02:00.540Z",
-        "reason": "documented one-off in DESIGN.md component notes; shipped value DESIGN.md was derived from (documenter chose not to tokenize single-use values)"
-      },
-      {
-        "rule": "design-system-font-size",
-        "value": "11px",
-        "createdAt": "2026-10-18T04:02:00.613Z",
-        "reason": "documented one-off in DESIGN.md component notes; shipped value DESIGN.md was derived from (documenter chose not to tokenize single-use values)"
-      },
-      {
-        "rule": "design-system-font-size",
-        "value": "14px",
-        "createdAt": "2026-10-18T04:02:00.685Z",
-        "reason": "documented one-off in DESIGN.md component notes; shipped value DESIGN.md was derived from (documenter chose not to tokenize single-use values)"
-      },
-      {
-        "rule": "design-system-font-size",
-        "value": "16px",
-        "createdAt": "2026-10-18T04:02:00.757Z",
-        "reason": "documented one-off in DESIGN.md component notes; shipped value DESIGN.md was derived from (documenter chose not to tokenize single-use values)"
-      },
-      {
-        "rule": "design-system-font-size",
-        "value": "44px",
-        "createdAt": "2026-10-18T04:02:00.827Z",
-        "reason": "documented one-off in DESIGN.md component notes; shipped value DESIGN.md was derived from (documenter chose not to tokenize single-use values)"
-      },
-      {
-        "rule": "design-system-font-size",
-        "value": "clamp(17px,4.6vw,20px)",
-        "createdAt": "2026-10-18T04:02:00.899Z",
-        "reason": "documented one-off in DESIGN.md component notes; shipped value DESIGN.md was derived from (documenter chose not to tokenize single-use values)"
-      },
-      {
-        "rule": "design-system-font-size",
-        "value": "20px",
-        "createdAt": "2026-10-18T04:02:07.063Z",
-        "reason": "hero promise fluid max: Ellie set the one-line pitch to 20px max (ellie-taste.md §2)"
+        "value": "#1877f2",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T12:05:14.608Z",
+        "reason": "documented one-off in DESIGN.md Colors: Facebook's own brand blue on the Facebook mark in the white link card; not a system color"
       }
     ]
   }

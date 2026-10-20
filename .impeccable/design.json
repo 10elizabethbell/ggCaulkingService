@@ -1,425 +1,504 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-18T04:00:28+00:00",
+  "generatedAt": "2026-10-20T12:05:32.099Z",
   "title": "Design System: G&G Caulking Service LLC",
   "extensions": {
     "colorMeta": {
-      "slab": {
+      "paper": {
         "role": "neutral",
-        "displayName": "Broom-Finished Concrete",
-        "canonical": "oklch(83.7% 0.013 87)",
+        "displayName": "Cool Paper",
+        "canonical": "#f4f6fb",
         "tonalRamp": [
-          "oklch(15% 0.008 87)",
-          "oklch(25% 0.008 87)",
-          "oklch(35% 0.013 87)",
-          "oklch(48% 0.013 87)",
-          "oklch(60% 0.013 87)",
-          "oklch(72% 0.013 87)",
-          "oklch(84% 0.013 87)",
-          "oklch(95% 0.008 87)"
+          "#0a0b0e",
+          "#202225",
+          "#393a3e",
+          "#595b5f",
+          "#7b7d82",
+          "#9fa1a6",
+          "#c5c7cc",
+          "#eceef3"
         ]
       },
-      "slab-2": {
+      "card": {
         "role": "neutral",
-        "displayName": "Wet Concrete",
-        "canonical": "oklch(79.0% 0.015 85)",
+        "displayName": "White Card",
+        "canonical": "#ffffff",
         "tonalRamp": [
-          "oklch(15% 0.009 85)",
-          "oklch(25% 0.009 85)",
-          "oklch(35% 0.015 85)",
-          "oklch(48% 0.015 85)",
-          "oklch(60% 0.015 85)",
-          "oklch(72% 0.015 85)",
-          "oklch(84% 0.015 85)",
-          "oklch(95% 0.009 85)"
+          "#0b0b0b",
+          "#222222",
+          "#3a3a3a",
+          "#5b5b5b",
+          "#7d7d7d",
+          "#a1a1a1",
+          "#c7c7c7",
+          "#eeeeee"
+        ]
+      },
+      "field": {
+        "role": "neutral",
+        "displayName": "Field Mist",
+        "canonical": "#e6ecf5",
+        "tonalRamp": [
+          "#080b11",
+          "#1e2228",
+          "#363b42",
+          "#565b63",
+          "#787e86",
+          "#9ca2aa",
+          "#c2c8d0",
+          "#e9eff8"
         ]
       },
       "ink": {
         "role": "neutral",
-        "displayName": "Charcoal-Blue Ink",
-        "canonical": "oklch(27.0% 0.022 254)",
+        "displayName": "Ink",
+        "canonical": "#0f2140",
         "tonalRamp": [
-          "oklch(15% 0.013 254)",
-          "oklch(25% 0.013 254)",
-          "oklch(35% 0.022 254)",
-          "oklch(48% 0.022 254)",
-          "oklch(60% 0.022 254)",
-          "oklch(72% 0.022 254)",
-          "oklch(84% 0.022 254)",
-          "oklch(95% 0.013 254)"
+          "#000825",
+          "#0f2140",
+          "#273a5c",
+          "#465b7f",
+          "#687ea4",
+          "#8ba3ca",
+          "#b0c9f1",
+          "#e6efff"
         ]
       },
-      "ink-2": {
+      "body": {
         "role": "neutral",
-        "displayName": "Weathered Ink",
-        "canonical": "oklch(40.9% 0.024 253)",
+        "displayName": "Slate Body",
+        "canonical": "#2a3a4c",
         "tonalRamp": [
-          "oklch(15% 0.014 253)",
-          "oklch(25% 0.014 253)",
-          "oklch(35% 0.024 253)",
-          "oklch(48% 0.024 253)",
-          "oklch(60% 0.024 253)",
-          "oklch(72% 0.024 253)",
-          "oklch(84% 0.024 253)",
-          "oklch(95% 0.014 253)"
+          "#010c1b",
+          "#142333",
+          "#2c3c4e",
+          "#4b5d70",
+          "#6d7f94",
+          "#91a4b9",
+          "#b6cae0",
+          "#e3f0ff"
         ]
       },
-      "paint": {
-        "role": "primary",
-        "displayName": "Layout-Marking Orange",
-        "canonical": "oklch(68.3% 0.211 39)",
+      "soft": {
+        "role": "neutral",
+        "displayName": "Slate Soft",
+        "canonical": "#4a5868",
         "tonalRamp": [
-          "oklch(15% 0.108 39)",
-          "oklch(25% 0.108 39)",
-          "oklch(35% 0.180 39)",
-          "oklch(48% 0.180 39)",
-          "oklch(60% 0.180 39)",
-          "oklch(72% 0.180 39)",
-          "oklch(84% 0.180 39)",
-          "oklch(95% 0.108 39)"
+          "#030c18",
+          "#162330",
+          "#2f3c4b",
+          "#4e5c6c",
+          "#707f90",
+          "#94a3b5",
+          "#b9c9dc",
+          "#e3f0ff"
         ]
       },
-      "paint-ink": {
-        "role": "primary",
-        "displayName": "Burnt Paint",
-        "canonical": "oklch(45.7% 0.145 39)",
-        "tonalRamp": [
-          "oklch(15% 0.087 39)",
-          "oklch(25% 0.087 39)",
-          "oklch(35% 0.145 39)",
-          "oklch(48% 0.145 39)",
-          "oklch(60% 0.145 39)",
-          "oklch(72% 0.145 39)",
-          "oklch(84% 0.145 39)",
-          "oklch(95% 0.087 39)"
-        ]
-      },
-      "chalk": {
+      "navy": {
         "role": "secondary",
-        "displayName": "Chalk-Line Blue",
-        "canonical": "oklch(38.7% 0.133 261)",
-        "tonalRamp": [
-          "oklch(15% 0.072 261)",
-          "oklch(25% 0.072 261)",
-          "oklch(35% 0.120 261)",
-          "oklch(48% 0.120 261)",
-          "oklch(60% 0.120 261)",
-          "oklch(72% 0.120 261)",
-          "oklch(84% 0.120 261)",
-          "oklch(95% 0.072 261)"
-        ]
-      },
-      "groove": {
-        "role": "neutral",
-        "displayName": "Saw-Cut Groove",
-        "canonical": "oklch(41.4% 0.013 82)",
-        "tonalRamp": [
-          "oklch(15% 0.008 82)",
-          "oklch(25% 0.008 82)",
-          "oklch(35% 0.013 82)",
-          "oklch(48% 0.013 82)",
-          "oklch(60% 0.013 82)",
-          "oklch(72% 0.013 82)",
-          "oklch(84% 0.013 82)",
-          "oklch(95% 0.008 82)"
-        ]
-      },
-      "sealant": {
-        "role": "neutral",
-        "displayName": "Sealant Grey",
-        "canonical": "oklch(60.5% 0.007 255)",
-        "tonalRamp": [
-          "oklch(15% 0.004 255)",
-          "oklch(25% 0.004 255)",
-          "oklch(35% 0.007 255)",
-          "oklch(48% 0.007 255)",
-          "oklch(60% 0.007 255)",
-          "oklch(72% 0.007 255)",
-          "oklch(84% 0.007 255)",
-          "oklch(95% 0.004 255)"
-        ]
-      },
-      "night": {
-        "role": "tertiary",
         "displayName": "Twilight Navy",
-        "canonical": "oklch(25.7% 0.047 261)",
+        "canonical": "#1d3f73",
         "tonalRamp": [
-          "oklch(15% 0.028 261)",
-          "oklch(25% 0.028 261)",
-          "oklch(35% 0.047 261)",
-          "oklch(48% 0.047 261)",
-          "oklch(60% 0.047 261)",
-          "oklch(72% 0.047 261)",
-          "oklch(84% 0.047 261)",
-          "oklch(95% 0.028 261)"
+          "#000923",
+          "#001e4e",
+          "#17396c",
+          "#375b91",
+          "#597eb7",
+          "#7ca3df",
+          "#a6c9ff",
+          "#e5efff"
         ]
       },
-      "night-2": {
-        "role": "tertiary",
-        "displayName": "Navy Shadow",
-        "canonical": "oklch(31.7% 0.053 260)",
+      "deep": {
+        "role": "secondary",
+        "displayName": "Deep Night Navy",
+        "canonical": "#0f2140",
         "tonalRamp": [
-          "oklch(15% 0.032 260)",
-          "oklch(25% 0.032 260)",
-          "oklch(35% 0.053 260)",
-          "oklch(48% 0.053 260)",
-          "oklch(60% 0.053 260)",
-          "oklch(72% 0.053 260)",
-          "oklch(84% 0.053 260)",
-          "oklch(95% 0.032 260)"
+          "#000825",
+          "#0f2140",
+          "#273a5c",
+          "#465b7f",
+          "#687ea4",
+          "#8ba3ca",
+          "#b0c9f1",
+          "#e6efff"
         ]
       },
-      "white": {
+      "on-dark": {
         "role": "neutral",
-        "displayName": "Site White",
-        "canonical": "oklch(98.5% 0.004 91)",
+        "displayName": "Night Paper",
+        "canonical": "#f4f7fb",
         "tonalRamp": [
-          "oklch(15% 0.002 91)",
-          "oklch(25% 0.002 91)",
-          "oklch(35% 0.004 91)",
-          "oklch(48% 0.004 91)",
-          "oklch(60% 0.004 91)",
-          "oklch(72% 0.004 91)",
-          "oklch(84% 0.004 91)",
-          "oklch(95% 0.002 91)"
+          "#090b0e",
+          "#202225",
+          "#383b3e",
+          "#585b5e",
+          "#7b7d81",
+          "#9fa2a5",
+          "#c5c7cb",
+          "#eceff3"
+        ]
+      },
+      "on-dark-soft": {
+        "role": "neutral",
+        "displayName": "Moonlit Blue",
+        "canonical": "#c9d7ea",
+        "tonalRamp": [
+          "#040b18",
+          "#182230",
+          "#303b4a",
+          "#505c6c",
+          "#727e90",
+          "#95a3b5",
+          "#bbc9db",
+          "#e4f0ff"
+        ]
+      },
+      "yellow": {
+        "role": "primary",
+        "displayName": "Caution-Tape Yellow",
+        "canonical": "#ffd23f",
+        "tonalRamp": [
+          "#100a00",
+          "#2b2000",
+          "#483800",
+          "#6f5800",
+          "#987900",
+          "#c39d00",
+          "#efc226",
+          "#ffeebc"
+        ]
+      },
+      "yellow-2": {
+        "role": "primary",
+        "displayName": "Warm Yellow Lift",
+        "canonical": "#ffdf6e",
+        "tonalRamp": [
+          "#0f0b00",
+          "#2a2100",
+          "#473900",
+          "#6d5900",
+          "#957b00",
+          "#be9f22",
+          "#e5c553",
+          "#ffeeb6"
+        ]
+      },
+      "yellow-ink": {
+        "role": "primary",
+        "displayName": "Tape Ink",
+        "canonical": "#7d5c00",
+        "tonalRamp": [
+          "#110a00",
+          "#2d1f00",
+          "#4c3700",
+          "#745500",
+          "#9a782b",
+          "#bf9c52",
+          "#e6c278",
+          "#ffecc8"
+        ]
+      },
+      "focus": {
+        "role": "secondary",
+        "displayName": "Focus Navy",
+        "canonical": "#1d3f73",
+        "tonalRamp": [
+          "#000923",
+          "#001e4e",
+          "#17396c",
+          "#375b91",
+          "#597eb7",
+          "#7ca3df",
+          "#a6c9ff",
+          "#e5efff"
+        ]
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "Signal Red",
+        "canonical": "#b3261e",
+        "tonalRamp": [
+          "#1f0000",
+          "#470001",
+          "#730002",
+          "#a81813",
+          "#d2463a",
+          "#fd6e5e",
+          "#ffb0a4",
+          "#ffe9e5"
+        ]
+      },
+      "photo-wait": {
+        "role": "neutral",
+        "displayName": "Photo Wait",
+        "canonical": "#d9dfe8",
+        "tonalRamp": [
+          "#080b11",
+          "#1e2228",
+          "#363b42",
+          "#565b63",
+          "#787e86",
+          "#9ca2aa",
+          "#c2c8d1",
+          "#e9eff8"
+        ]
+      },
+      "photo-wait-dark": {
+        "role": "neutral",
+        "displayName": "Photo Wait Dark",
+        "canonical": "#1a2c4c",
+        "tonalRamp": [
+          "#000825",
+          "#0f2140",
+          "#273a5b",
+          "#475b7f",
+          "#687ea3",
+          "#8ca2ca",
+          "#b1c8f1",
+          "#e6efff"
         ]
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Hero h1 only; uppercase, one emphasis word in Burnt Paint."
+        "purpose": "Hero headline only; letters bounce in on load."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Section h2s, uppercase."
+        "purpose": "One per band."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Step and result-card headings, uppercase."
+        "purpose": "Step names; 26px for the result heading and footer name."
       },
       "lead": {
         "displayName": "Lead",
-        "purpose": "Paragraph under a headline; hero promise uses clamp(17px, 4.6vw, 20px) at 1.45."
+        "purpose": "Paragraph under a band headline."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Running text."
+        "purpose": "All running text, inputs and chips."
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Form labels, legends, hero hint."
+        "purpose": "Form labels, legends, header hours and phone."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Every button."
+      },
+      "meta": {
+        "displayName": "Meta",
+        "purpose": "Helper lines and error messages (15px); optional-field notes at 14px."
+      }
+    },
+    "roundedMeta": {
+      "link-card": {
+        "value": "20px",
+        "role": "one-off",
+        "purpose": "The Facebook 'see more of our work' link card only."
       }
     },
     "shadows": [
       {
-        "name": "pressed-block",
-        "value": "0 3px 8px -3px rgba(31,39,49,.45)",
-        "purpose": "GG mark block."
+        "name": "float",
+        "value": "0 10px 28px rgba(0,0,0,.26)",
+        "purpose": "The fixed 60px floating estimate circle."
       },
       {
-        "name": "primary-lift",
-        "value": "0 8px 18px -10px rgba(31,39,49,.55)",
-        "purpose": "Paint-filled primary button."
-      },
-      {
-        "name": "slab-resting-card",
-        "value": "0 14px 26px -16px rgba(31,39,49,.8)",
-        "purpose": "Facebook row."
-      },
-      {
-        "name": "night-photo",
-        "value": "0 26px 50px -26px rgba(0,0,0,.7)",
-        "purpose": "Night still on navy."
+        "name": "hero-card",
+        "value": "0 24px 60px rgba(0,0,0,.3)",
+        "purpose": "The hero photo card at 1024px+."
       }
     ],
     "motion": [
       {
+        "name": "letter-in",
+        "value": "1s cubic-bezier(.34,1.56,.64,1), 20ms stagger, from translateX(50px)",
+        "purpose": "Hero H1 letter bounce-in."
+      },
+      {
+        "name": "rise",
+        "value": "0.4s cubic-bezier(.16,1,.3,1), translateY(12px)",
+        "purpose": "Fade-up for elements that start below the first screen, and the written-message panel."
+      },
+      {
+        "name": "float-slide",
+        "value": "0.35s cubic-bezier(.2,.8,.2,1), translateY(120px)",
+        "purpose": "Floating circle slides in after the hero."
+      },
+      {
         "name": "press",
-        "value": "transform .15s; translateY(1px) on :active",
+        "value": "0.12s scale(.98)",
         "purpose": "Button press."
       },
       {
-        "name": "state-colour",
-        "value": "background-color .2s, color .2s",
-        "purpose": "Hover colour changes, gated behind (hover:hover)."
+        "name": "state",
+        "value": "0.2s background-color, color, border-color (0.15s on fields and chips)",
+        "purpose": "Hover and focus color changes."
       },
       {
-        "name": "photo-in",
-        "value": "opacity .5s",
-        "purpose": "Lazy-loaded stills fade in."
-      },
+        "name": "photo-fade",
+        "value": "0.6s ease-out opacity",
+        "purpose": "Hero photo fades in once decoded."
+      }
+    ],
+    "textures": [
       {
-        "name": "hint-out",
-        "value": "opacity .6s",
-        "purpose": "Hero hint fades after first interaction."
-      },
-      {
-        "name": "seam-fill",
-        "value": "~1s fill front, damped spring (k 38, c 6.5) under pointer",
-        "purpose": "Section seams fill on first view and give under the pointer."
-      },
-      {
-        "name": "slab-tuning",
-        "value": "JOINT_GAP 130/190px, NOZZLE_RATE 30, FLOW 16, AUTO_SPEED 120/300px/s, IDLE_RESUME 3000ms",
-        "purpose": "Hero caulk-gun constants at the top of the script."
-      },
-      {
-        "name": "reduced-motion",
-        "value": "prefers-reduced-motion: reduce",
-        "purpose": "Loop never starts; seams render pre-filled; transitions removed."
+        "name": "line-texture",
+        "value": "repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.035) 22px 23px)",
+        "purpose": "Faint diagonal lines on the deep navy band, the footer and the hero ground."
       }
     ],
     "breakpoints": [
       {
-        "name": "tablet",
+        "name": "narrow",
+        "value": "max-width: 380px"
+      },
+      {
+        "name": "md",
         "value": "760px"
       },
       {
-        "name": "desktop",
+        "name": "lg",
         "value": "1024px"
+      },
+      {
+        "name": "landscape-phone",
+        "value": "max-height: 500px and orientation: landscape"
       }
     ]
   },
   "components": [
     {
-      "name": "Fill Button (primary)",
+      "name": "Primary Button",
       "kind": "button",
-      "refersTo": "button-fill",
-      "description": "The single primary action: paint ground, ink edge.",
-      "html": "<a class=\"ds-btn ds-btn-fill\" href=\"#\">Get a free estimate</a>",
-      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 22px;border-radius:12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-weight:800;font-size:17px;text-decoration:none;cursor:pointer;border:2px solid var(--ink,#1f2731);transition:transform .15s,background-color .2s,color .2s}.ds-btn:active{transform:translateY(1px)}.ds-btn-fill{background:var(--paint,#ff5b14);color:var(--ink,#1f2731);box-shadow:0 8px 18px -10px rgba(31,39,49,.55)}@media (hover:hover){.ds-btn-fill:hover{background:#ff7034}}.ds-btn-fill:focus-visible{outline:3px solid var(--chalk,#163f8a);outline-offset:3px}"
+      "refersTo": "button-primary",
+      "description": "Yellow pill for the one main action per band.",
+      "html": "<button class=\"ds-btn-primary\">Get a free estimate</button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 26px;border-radius:999px;font:400 18px/1 \"Cal Sans\",\"Avenir Next\",\"Segoe UI\",system-ui,sans-serif;background:#ffd23f;color:#0f2140;border:2px solid #ffd23f;cursor:pointer;transition:background-color .2s,border-color .2s,transform .12s}.ds-btn-primary:hover{background:#ffdf6e;border-color:#ffdf6e}.ds-btn-primary:focus-visible{outline:3px solid #1d3f73;outline-offset:3px}.ds-btn-primary:active{transform:scale(.98)}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Second action on navy grounds.",
+      "html": "<div class=\"ds-navy\"><button class=\"ds-btn-ghost\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M24 12a12 12 0 1 0-13.9 11.9v-8.4h-3V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z\"/></svg>Message us on Facebook</button></div>",
+      "css": ".ds-navy{background:#1d3f73;padding:24px}.ds-btn-ghost{display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:0 26px;border-radius:999px;font:400 18px/1 \"Cal Sans\",\"Avenir Next\",\"Segoe UI\",system-ui,sans-serif;background:transparent;color:#f4f7fb;border:2px solid rgba(244,247,251,.7);cursor:pointer;transition:background-color .2s,border-color .2s,transform .12s}.ds-btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1)}.ds-btn-ghost:focus-visible{outline:3px solid #ffd23f;outline-offset:3px}.ds-btn-ghost:active{transform:scale(.98)}"
     },
     {
       "name": "Line Button",
       "kind": "button",
       "refersTo": "button-line",
-      "description": "Secondary action on concrete: transparent with ink edge.",
-      "html": "<a class=\"ds-btn ds-btn-line\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1z\"/></svg>Message us on Facebook</a>",
-      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 22px;border-radius:12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-weight:800;font-size:17px;text-decoration:none;cursor:pointer;border:2px solid var(--ink,#1f2731);transition:transform .15s,background-color .2s,color .2s}.ds-btn:active{transform:translateY(1px)}.ds-btn-line{background:transparent;color:var(--ink,#1f2731)}@media (hover:hover){.ds-btn-line:hover{background:rgba(31,39,49,.08)}}.ds-btn-line:focus-visible{outline:3px solid var(--chalk,#163f8a);outline-offset:3px}"
-    },
-    {
-      "name": "Send Button",
-      "kind": "button",
-      "refersTo": "button-send",
-      "description": "Full-width ink submit on the paint estimate ground.",
-      "html": "<div style=\"background:#ff5b14;padding:20px\"><button class=\"ds-btn ds-btn-send\">Write my message for Facebook</button></div>",
-      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 22px;border-radius:12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-weight:800;font-size:17px;text-decoration:none;cursor:pointer;border:2px solid var(--ink,#1f2731);transition:transform .15s,background-color .2s,color .2s}.ds-btn:active{transform:translateY(1px)}.ds-btn-send{background:var(--ink,#1f2731);color:var(--white,#fbfaf7);width:100%}.ds-btn-send:hover,.ds-btn-send:focus-visible{outline:3px solid var(--chalk,#163f8a);outline-offset:2px;background:#2b3542}"
+      "description": "Quiet action on the white card.",
+      "html": "<button class=\"ds-btn-line\">Copy message</button>",
+      "css": ".ds-btn-line{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 26px;border-radius:999px;font:400 18px/1 \"Cal Sans\",\"Avenir Next\",\"Segoe UI\",system-ui,sans-serif;background:transparent;color:#0f2140;border:2px solid #0f2140;cursor:pointer;transition:background-color .2s,transform .12s}.ds-btn-line:hover{background:rgba(15,33,64,.06)}.ds-btn-line:focus-visible{outline:3px solid #1d3f73;outline-offset:3px}.ds-btn-line:active{transform:scale(.98)}"
     },
     {
       "name": "Text Field",
       "kind": "input",
-      "refersTo": "input-field",
-      "description": "White field, 2px ink edge; one chalk outline on hover/focus.",
-      "html": "<div style=\"background:#ff5b14;padding:20px\"><label class=\"ds-label\" for=\"ds-f\">Your name</label><input class=\"ds-input\" id=\"ds-f\" type=\"text\"></div>",
-      "css": ".ds-label{display:block;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-weight:800;font-size:15px;color:#1f2731;margin-bottom:6px}.ds-input{width:100%;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:17px;color:var(--ink,#1f2731);background:var(--white,#fbfaf7);border:2px solid var(--ink,#1f2731);border-radius:10px;padding:13px 14px;min-height:52px;transition:outline-color .15s}.ds-input:hover,.ds-input:focus{outline:3px solid var(--chalk,#163f8a);outline-offset:1px}"
+      "refersTo": "input",
+      "description": "Labelled field on the white estimate card.",
+      "html": "<label class=\"ds-field\"><span>Your name</span><input type=\"text\"></label>",
+      "css": ".ds-field{display:grid;gap:8px}.ds-field span{font:400 17px/1.2 \"Cal Sans\",\"Avenir Next\",\"Segoe UI\",system-ui,sans-serif;color:#0f2140}.ds-field input{font:16px/1.4 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Helvetica Neue\",Arial,sans-serif;color:#0f2140;background:#e6ecf5;border:2px solid transparent;border-radius:10px;padding:13px 14px;min-height:52px;caret-color:#1d3f73;transition:border-color .15s}.ds-field input:hover{border-color:#1d3f73}.ds-field input:focus{outline:none;border-color:#1d3f73}"
     },
     {
-      "name": "Time Chips",
+      "name": "Choice Chips",
       "kind": "chip",
       "refersTo": "chip",
-      "description": "Radio chips; selected fills ink.",
+      "description": "Radio pills for the best time for the work.",
       "html": "<div class=\"ds-chips\"><input type=\"radio\" name=\"ds-w\" id=\"ds-w1\" checked><label for=\"ds-w1\">Any time</label><input type=\"radio\" name=\"ds-w\" id=\"ds-w2\"><label for=\"ds-w2\">Nights</label><input type=\"radio\" name=\"ds-w\" id=\"ds-w3\"><label for=\"ds-w3\">Weekends</label></div>",
-      "css": ".ds-chips{display:flex;flex-wrap:wrap;gap:8px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}.ds-chips input{position:absolute;opacity:0;width:1px;height:1px}.ds-chips label{display:flex;align-items:center;min-height:46px;padding:0 16px;border:2px solid var(--ink,#1f2731);border-radius:10px;background:var(--white,#fbfaf7);color:#1f2731;cursor:pointer;font-weight:700}.ds-chips label:hover,.ds-chips input:focus-visible+label{outline:3px solid var(--chalk,#163f8a);outline-offset:1px}.ds-chips input:checked+label{background:var(--ink,#1f2731);color:var(--white,#fbfaf7)}"
+      "css": ".ds-chips{display:flex;flex-wrap:wrap;gap:10px}.ds-chips input{position:absolute;width:1px;height:1px;opacity:0;margin:0}.ds-chips label{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border-radius:999px;background:#e6ecf5;border:2px solid transparent;font:16px/1 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Helvetica Neue\",Arial,sans-serif;color:#0f2140;cursor:pointer;transition:border-color .15s,background-color .15s,color .15s}.ds-chips label:hover{border-color:#1d3f73}.ds-chips input:focus-visible+label{outline:3px solid #1d3f73;outline-offset:3px}.ds-chips input:checked+label{background:#0f2140;color:#fff}"
     },
     {
-      "name": "Facebook Row",
+      "name": "Estimate Card",
       "kind": "card",
-      "refersTo": "facebook-row",
-      "description": "Ink slab linking out; only the arrow reacts to hover.",
-      "html": "<a class=\"ds-more\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"30\" height=\"30\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"12\" fill=\"#1877f2\"/><path fill=\"#fff\" d=\"M13.3 19.5v-6.2h2.1l.3-2.5h-2.4V9.3c0-.7.2-1.2 1.2-1.2h1.3V5.9c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3v1.8H8.6v2.5h2.1v6.2h2.6z\"/></svg><span class=\"ds-more-txt\">Click to see more of our work.</span><span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\"><path d=\"M5 12h13m-5-6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></a>",
-      "css": ".ds-more{display:inline-flex;align-items:center;gap:14px;padding:16px 14px 16px 18px;min-height:64px;border-radius:12px;background:var(--ink,#1f2731);color:var(--white,#fbfaf7);text-decoration:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-weight:800;font-size:18px;box-shadow:0 14px 26px -16px rgba(31,39,49,.8)}.ds-more-txt{flex:1;line-height:1.25}.ds-arrow{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:rgba(251,250,247,.14);transition:background-color .2s,color .2s}@media (hover:hover){.ds-more:hover .ds-arrow{background:var(--paint,#ff5b14);color:var(--ink,#1f2731)}}.ds-more:focus-visible{outline:none}.ds-more:focus-visible .ds-arrow{background:var(--paint,#ff5b14);color:var(--ink,#1f2731);outline:3px solid var(--paint,#ff5b14);outline-offset:3px}"
+      "refersTo": "card",
+      "description": "White 24px card on the navy estimate band.",
+      "html": "<div class=\"ds-navy-band\"><div class=\"ds-card\"><h3>Almost done</h3><p>Copy the message below, then open Facebook, tap Message, and paste it in.</p></div></div>",
+      "css": ".ds-navy-band{background:#1d3f73;padding:24px}.ds-card{background:#fff;border-radius:24px;padding:clamp(20px,5vw,32px);max-width:600px;color:#2a3a4c;font:16px/1.7 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Helvetica Neue\",Arial,sans-serif}.ds-card h3{margin:0 0 8px;font:400 26px/1.08 \"Cal Sans\",\"Avenir Next\",\"Segoe UI\",system-ui,sans-serif;color:#0f2140}.ds-card p{margin:0}"
     },
     {
-      "name": "Header Wordmark",
+      "name": "Header",
       "kind": "nav",
-      "refersTo": "mark-block",
-      "description": "GG paint block with stacked uppercase name; phone slot opposite.",
-      "html": "<div class=\"ds-top\"><a class=\"ds-mark\" href=\"#\"><b>G&amp;G</b><span>Caulking<small>Service LLC</small></span></a><span class=\"ds-phone\">Open 24/7</span></div>",
-      "css": ".ds-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;background:var(--slab,#cdc9c0);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:#1f2731}.ds-mark{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;font-weight:900;text-transform:uppercase;letter-spacing:.01em;line-height:1}.ds-mark b{display:grid;place-items:center;width:44px;height:44px;border-radius:9px;background:var(--paint,#ff5b14);color:var(--ink,#1f2731);font-size:17px;letter-spacing:-.04em;box-shadow:0 3px 8px -3px rgba(31,39,49,.45)}.ds-mark span{font-size:15px}.ds-mark small{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--ink-2,#414b57);margin-top:3px}.ds-mark:focus-visible{outline:3px solid var(--chalk,#163f8a);outline-offset:3px}.ds-phone{font-weight:800;font-size:14px;color:var(--ink-2,#414b57);min-height:44px;display:flex;align-items:center}"
+      "refersTo": "",
+      "description": "Paper header: brand lockup left, 24/7 hours or phone right.",
+      "html": "<header class=\"ds-top\"><a class=\"ds-brand\" href=\"#\"><b>G&amp;G</b><span>Caulking Service LLC</span></a><span class=\"ds-hours\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\"/><path d=\"M12 7v5l3.5 2.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Open 24/7</span></header>",
+      "css": ".ds-top{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:0 20px;background:#f4f6fb;color:#0f2140}.ds-brand{display:flex;flex-direction:column;text-decoration:none;color:inherit;line-height:1}.ds-brand b{font:400 22px/1 \"Cal Sans\",\"Avenir Next\",\"Segoe UI\",system-ui,sans-serif}.ds-brand span{font:600 12px/1 -apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#4a5868;margin-top:5px}.ds-brand:focus-visible{outline:3px solid #1d3f73;outline-offset:3px;border-radius:6px}.ds-hours{display:inline-flex;align-items:center;gap:8px;font:400 17px/1 \"Cal Sans\",\"Avenir Next\",\"Segoe UI\",system-ui,sans-serif;color:#4a5868}.ds-hours svg{color:#7d5c00}"
     },
     {
-      "name": "Section Seam",
+      "name": "Numbered Steps",
       "kind": "custom",
-      "refersTo": "seam",
-      "description": "Static rendering of the sealed joint between two section grounds (live version is a canvas).",
-      "html": "<div class=\"ds-seam\"><i></i></div>",
-      "css": ".ds-seam{position:relative;height:34px;background:linear-gradient(to bottom,var(--slab,#cdc9c0) 50%,var(--night,#16233a) 50%)}.ds-seam i{position:absolute;left:0;right:0;top:11px;height:12px;background:rgba(70,64,56,.22)}.ds-seam i::before{content:'';position:absolute;left:0;right:0;top:1.5px;height:9px;background:#57534b}.ds-seam i::after{content:'';position:absolute;left:0;right:0;top:3px;height:6px;border-radius:3px;background:linear-gradient(to bottom,#7f8286,#a3a6aa 50%,#7f8286)}"
+      "refersTo": "step-number",
+      "description": "Ordered steps with yellow numeral circles.",
+      "html": "<ol class=\"ds-steps\"><li><div><b>Tell us about the job.</b><span>Use the form below.</span></div></li><li><div><b>Free estimate.</b><span>We look at the job and tell you what it will take.</span></div></li><li><div><b>Sealed.</b><span>At whatever hour suits you.</span></div></li></ol>",
+      "css": ".ds-steps{list-style:none;margin:0;padding:0;display:grid;gap:24px;counter-reset:s;font:16px/1.7 -apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif}.ds-steps li{display:grid;grid-template-columns:48px 1fr;gap:16px;counter-increment:s}.ds-steps li::before{content:counter(s);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#ffd23f;color:#0f2140;font:400 20px/1 \"Cal Sans\",\"Avenir Next\",system-ui,sans-serif}.ds-steps b{display:block;font:400 21px/1.2 \"Cal Sans\",\"Avenir Next\",system-ui,sans-serif;color:#0f2140;margin-top:4px}.ds-steps span{display:block;margin-top:4px;color:#4a5868}"
     },
     {
-      "name": "Step Row",
+      "name": "Floating Estimate Circle",
       "kind": "custom",
-      "refersTo": "step",
-      "description": "Numbered step between 5px groove rules.",
-      "html": "<ol class=\"ds-steps\"><li><span class=\"n\">1</span><h3>Tell us about the job</h3><p>Fill in the form below.</p></li></ol>",
-      "css": ".ds-steps{list-style:none;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:#1f2731;background:var(--slab,#cdc9c0)}.ds-steps li{display:grid;grid-template-columns:52px 1fr;gap:4px 14px;padding:20px 0;border-top:5px solid var(--groove,#4f4b44);border-bottom:5px solid var(--groove,#4f4b44)}.ds-steps .n{grid-row:span 2;font-size:44px;font-weight:900;line-height:.9;color:var(--paint-ink,#963003)}.ds-steps h3{margin:0;font-size:22px;font-weight:900;text-transform:uppercase;line-height:1.05;letter-spacing:-.02em;padding-top:4px}.ds-steps p{margin:0;color:var(--ink-2,#414b57);font-size:17px;line-height:1.55}"
+      "refersTo": "float-circle",
+      "description": "The one fixed 60px yellow circle; never a bottom bar.",
+      "html": "<a class=\"ds-float\" href=\"#\" aria-label=\"Get a free estimate\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 5h16v11H9l-5 4z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-float{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:#ffd23f;color:#0f2140;box-shadow:0 10px 28px rgba(0,0,0,.26);transition:transform .35s cubic-bezier(.2,.8,.2,1)}.ds-float:focus-visible{outline:3px solid #1d3f73;outline-offset:3px}"
     }
   ],
   "narrative": {
-    "northStar": "The Marked-Up Slab",
-    "overview": "The page is the pour G&G seals. Its ground is broom-finished concrete with a fine grain over it, cut into panels by saw-cut joints, marked with hand-sprayed layout-paint ticks, and sealed with grey beads that go in while you watch. Everything else on the page borrows from that job site: orange paint for the one thing you should do, chalk-line blue for the thing you're touching, sealant grey in the gaps, and twilight navy when the copy turns to night work.\n\nIt is built for a phone held in one hand, inside Facebook's in-app browser. The type is heavy, uppercase and set tight, the house style for these pitch sites. Controls are big (44px at the smallest, 56px for buttons) and edged in solid ink. Depth comes from the material itself (grooves, beads, grain) more than from shadows. The hero and the joints between sections are live canvases. A caulk gun runs on its own and follows the mouse or finger when someone takes over, and the same bead renderer fills every section seam.\n\nIt rejects the usual contractor template of a stock hero photo with rows of icon cards. The only photos are the crew's own stills, and they sit in a grid whose gaps are sealed joints.",
+    "northStar": "The Lot at Twilight",
+    "overview": "The page is a stack of calm, full-bleed bands: off-white paper, white, twilight navy and deep navy, the navies taken from the sky in the crew's own job video. Each band holds one thing: the claim, the work, the 24/7 promise, the steps, the estimate form. Nothing competes inside a band. Order and space build trust here; decoration does not. The crew's job photos are the only imagery, always shown as real photos under navy or in rounded cards, never as illustration.\n\nCaution-tape yellow, from the same lot, is the one warm note. It is a fill: the primary button, the step numbers, the floating circle, the selection highlight. Type is Cal Sans for every heading, label and button, at one weight (400). Running text is the system stack at 16/1.7 so it reads like a phone's own UI. Motion is limited to three moves: the hero headline's letters bounce in, things below the first screen rise 12px as they arrive, and the floating circle slides up once the hero has scrolled away.\n\nThe system is built at 360–430px first. Wider screens get more air (40px gutters, 96px bands) and a few two-column splits. They do not get new elements.",
     "keyCharacteristics": [
-      "Concrete ground (slab + fractal-noise grain) on every light section; navy for the night section; paint orange for the estimate section.",
-      "One orange: layout-paint marks, the primary button, the GG mark block and the estimate ground.",
-      "Heavy uppercase system lettering (900 weight, tight leading, negative tracking) for every heading.",
-      "Joints everywhere: saw-cut grooves in the hero, sealed seams between sections, 5px groove rules in the steps, sealed gaps in the photo grid.",
-      "Solid 2px ink borders on every control; chalk-blue outline is the only hover/focus signal on form controls."
+      "Full-bleed bands in four grounds: paper, white, navy, textured deep navy",
+      "Yellow is a fill, not a text color on light grounds",
+      "Cal Sans 400 for display, labels and buttons; system sans 16/1.7 for body",
+      "Soft geometry: 24px cards, 10px fields, pill buttons, circles",
+      "The crew's own photos are the only imagery",
+      "Three motions only, all switched off under reduced motion"
     ],
     "rules": [
       {
-        "name": "The One Paint Rule",
-        "body": "Orange is layout paint: it marks the joints, the single primary action and the estimate ground. It never fills body text on concrete; use Burnt Paint when orange has to be read.",
+        "name": "The Fill-Only Yellow Rule",
+        "body": "Caution-tape yellow is a fill on light grounds, never text. When yellow has to be read as text on paper or white, it becomes Tape Ink. On navy and deep navy, yellow text is allowed for accent words, and focus rings there turn yellow.",
         "section": "colors"
       },
       {
-        "name": "The Chalk Means Touch Rule",
-        "body": "Chalk blue appears only when something is being hovered or focused. On ink or navy grounds, where chalk would vanish, the focus ring switches to paint orange (footer links, the Facebook row's arrow).",
+        "name": "The One Warm Note Rule",
+        "body": "Yellow is the only warm color. It marks the next action, so it never decorates. One filled yellow button per band.",
         "section": "colors"
       },
       {
-        "name": "The Stencil Heading Rule",
-        "body": "Every heading (h1–h3) is 900 weight, uppercase, with negative tracking, sub-1 leading and `text-wrap: balance`. Nothing else on the page is uppercase except the wordmark and the footer name.",
+        "name": "The One Weight Rule",
+        "body": "Cal Sans is only ever set at 400. Hierarchy comes from size and color, never from bold display type.",
         "section": "typography"
       },
       {
-        "name": "The Plain Body Rule",
-        "body": "Body copy never goes uppercase, never goes below 15px, and never runs past about 32em.",
+        "name": "The Balanced Heading Rule",
+        "body": "Headings use `text-wrap: balance` and a tight 1.02–1.08 line height. Body never goes below 16px.",
         "section": "typography"
       },
       {
-        "name": "The Seam Not Margin Rule",
-        "body": "Sections meet at a sealed joint. Do not separate them with whitespace alone, a hairline, or a gradient fade.",
-        "section": "layout"
-      },
-      {
-        "name": "The Uncut Pour Rule",
-        "body": "Text never sits across a joint. The slab's joint grid is laid out around the copy, not the other way round.",
-        "section": "layout"
-      },
-      {
-        "name": "The Material Depth Rule",
-        "body": "Reach for groove, bead and grain before a shadow. Shadows are soft, negative-spread and ink-tinted; never hard-offset.",
+        "name": "The Flat Bands Rule",
+        "body": "Cards, fields, chips and buttons have no shadow at rest or on hover. Shadows belong only to things that sit above the page: the floating circle and the wide-screen hero card.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "Do put every light section on slab plus the noise grain, and join sections with a seam whose halves match the grounds on either side.",
-      "Do keep orange to marks, the single primary action, the GG block and the estimate ground. Use Burnt Paint (paint-ink) when orange must be read as text on concrete.",
-      "Do signal hover and focus on form controls with one 3px chalk outline, and switch the ring to paint on ink or navy grounds.",
-      "Do put hover colour changes inside `@media (hover:hover)`, so they don't stick after a tap.",
-      "Do set every heading in the system stack at 900, uppercase, tight leading, negative tracking, balanced.",
-      "Do keep touch targets at 44px or more (buttons 56px, fields 52px, chips 46px) with 2px ink borders.",
-      "Do route anything phone-dependent through the single `PHONE` constant, and expose new canvas behaviour as named tuning constants at the top of the script.",
-      "Do honour `prefers-reduced-motion`: seams render pre-filled and static, the animation loop never starts, transitions are removed."
+      "Do keep yellow (#ffd23f) as a fill with ink (#0f2140) text on it, and switch to Tape Ink (#7d5c00) whenever yellow has to be text on paper or white.",
+      "Do build pages from full-bleed bands (paper, white, navy, textured deep navy), one job per band, 64px padding on phones and 96px at 760px+.",
+      "Do set every heading, label and button in Cal Sans at 400, and body at 16px/1.7 in the system sans.",
+      "Do use 24px corners for cards and photos, 10px for fields, pills for buttons and chips.",
+      "Do keep tap targets at 44px minimum (56px buttons, 52px fields, 48px chips).",
+      "Do put the crew's own photos under navy or in rounded 4:5 cards, with a photo-wait tone behind them while they load.",
+      "Do turn focus rings yellow on navy and deep navy, navy on light grounds and inside the white card."
     ],
     "donts": [
-      "Don't let a joint, groove or bead cross text; lay the grid out around the copy.",
-      "Don't use a stock hero photo, icon cards, or any imagery that isn't the crew's own work.",
-      "Don't add border changes, glows or background shifts on top of the chalk outline for field hover or focus.",
-      "Don't recolour the whole Facebook row on hover; only the arrow changes.",
-      "Don't use hard offset shadows or heavy elevation; depth comes from the material.",
-      "Don't introduce a second accent hue or a webfont for display type.",
-      "Don't set orange (#ff5b14) as text on concrete or white."
+      "Don't set yellow text on paper or white, or put white text on yellow.",
+      "Don't add shadows to cards, fields, chips or buttons; only the floating circle and the wide-screen hero card float.",
+      "Don't add motion beyond the letter bounce-in, the 12px fade-up and the floating circle's slide, and never animate what is already on the first screen.",
+      "Don't add a second warm accent or decorative gradient fills; the only gradients are the hero's navy photo overlay and the deep-navy line texture.",
+      "Don't use bold Cal Sans.",
+      "Don't replace the floating circle with a sticky bottom bar."
     ]
   }
 }
