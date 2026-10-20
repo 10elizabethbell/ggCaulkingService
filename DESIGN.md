@@ -293,6 +293,9 @@ One fixed 60px yellow circle with a 26px chat icon, 16px from the bottom-right c
 - **Photo fade:** the hero photo fades in over 0.6s once loaded.
 - Under reduced motion, all of it is off.
 
+### Eyebrow pill (house exception)
+A quiet label above the hero H1 and two section headings (hero, 24/7, estimate): 14px system text, 500 weight, a 7px yellow dot, `rgba(255,255,255,.12)` tint on dark bands (`rgba(15,33,64,.06)` on light), pill radius, 9px 14px padding, no hover, no arrow, no shadow, marked up as `<p>`. Impeccable's craft floor bans eyebrows; Ellie chose them for every calm-style pitch site (2026-10-19), so they stay. Use them on a few headings only, never every one.
+
 ## Do's and Don'ts
 
 ### Do:

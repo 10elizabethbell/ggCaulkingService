@@ -20,6 +20,15 @@
         ],
         "createdAt": "2026-10-20T12:05:14.608Z",
         "reason": "documented one-off in DESIGN.md Colors: Facebook's own brand blue on the Facebook mark in the white link card; not a system color"
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T00:00:00.000Z",
+        "reason": "house calm band style: faint 135deg line texture on deep bands, Ellie's choice (pitch-site calm-photo-style.md item 2)"
       }
     ]
   }

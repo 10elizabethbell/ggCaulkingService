@@ -22,7 +22,7 @@ The business hasn't been contacted, so the whole site was rebuilt under the new 
 - **No place in the H1.** The calm style wants one, but the brief says area is unknown (Essex County, NJ is only inferred from the referral group). Once confirmed, try "Every joint sealed in Essex County, day or night." or similar.
 - **"We" voice** (the caption says "We work 24/7"). Lines that are my words, for Orlando to confirm: "fill every joint like it's on our own lot", "Your lot can't close for a day while we work. So we come overnight, before you open, or on a weekend.", "every joint filled clean, and the site left the way we found it."
 - **Colours** are inferred from the footage (no logo or brand).
-- **Wide screens (1024px+) get the plain textured navy hero.** The only hero-capable photo is a 720×960 still; filling a 1440px band blew it up 2× and cropped to a soft strip of building and the neighbour's trucks. Phones and tablets show the photo.
+- **Wide screens (1024px+) show the hero photo as a card, not behind the text.** The only hero-capable photo is a 720×960 still; filling a 1440px band blew it up 2× into a soft strip of building and the neighbour's trucks. So phones and tablets get it under the navy overlay, and wide screens get it whole as a 4:5 card on the right of the textured band. The calm rule says a photo that doesn't fit the wide band goes further down the page; both reviewers flagged the empty half-band instead, so check this call.
 
 ## Placeholders and gaps
 - Phone, email, service area, services list, logo: none.
@@ -42,10 +42,10 @@ The business hasn't been contacted, so the whole site was rebuilt under the new 
 
 ## Ideas not built (yours to pick)
 - **Runner-up signature (opt-in): the slab you seal.** The previous build's canvas hero, a caulk gun sealing saw-cut joints that follows your finger (git `dccb05d`). Other worlds from the trade: a sealant bead laid along a section divider as you scroll; a floodlit night slab with caution tape; a before/after of an open vs a sealed joint.
-- **Desktop hero photo as a card:** on wide screens, show the 720×960 still at native size as a 24px card on the right half of the hero instead of the plain band. Not built because the calm rule says a photo that doesn't fit the wide band goes further down the page.
+- **Plain band on wide screens** instead of the hero photo card, if you'd rather follow calm item 7 to the letter (delete the `.hero-img` rules in the 1024px media query and hide it there).
 - Before/after slider once real pairs exist.
 - A services section (rows with arrow circles on navy) once services are confirmed.
-- Atkinson Hyperlegible or similar is irrelevant here (the audience isn't 40+ by the brief), so no older-audience rules were applied.
+- The brief doesn't put the audience at 40+, so the older-audience rules (no animation) weren't applied.
 
 ## Not verified
 - Real-device touch, the clipboard and "Open Facebook" hand-off inside Facebook's in-app browser on iOS and Android.
@@ -56,7 +56,6 @@ The business hasn't been contacted, so the whole site was rebuilt under the new 
 - Kept against Impeccable on purpose (Ellie's calm-style choices): eyebrow pills (craft floor bans them), the band texture (detector flags repeating stripes), the H1 bounce-in, the floating circle, Cal Sans.
 - Owner-voice lines to confirm with Orlando: "the site left the way we found it", "he gets back to you himself".
 
-## NOT FINISHED (usage limit hit mid-pass)
-- The last batch of fixes is pushed but **not re-screenshotted**: check 1024 and 1440 hero (promise and buttons should be on one line each), and 844×390 landscape.
-- `DESIGN.md` and `.impeccable/design.json` still describe the old slab world; run `impeccable:impeccable-documenter` to regenerate them, and clear the stale `design-system-*` ignores in `.impeccable/config.json`.
-- The revamp-done marker has not been touched.
+## Finished after the usage-limit pause (2026-10-20)
+- Re-shot 1024, 1440 and 844×390 landscape after the last fixes: promise and both buttons sit on one line each, landscape keeps both buttons in the first screen.
+- `DESIGN.md` and `.impeccable/design.json` regenerated from the built page; stale detector ignores from the slab world removed.
