@@ -1,57 +1,62 @@
-# G&G Caulking Service LLC: handoff at ~60%
+# G&G Caulking Service LLC — handoff at ~60%
 
-**Live:** https://10elizabethbell.github.io/ggCaulkingService/ · **Repo:** https://github.com/10elizabethbell/ggCaulkingService · **Built:** 2026-10-17 from Muse brief (run 2026-10-18, thin brief)
+**Live:** https://10elizabethbell.github.io/ggCaulkingService/ · **Repo:** https://github.com/10elizabethbell/ggCaulkingService · **Built:** 2026-10-17 from Muse brief (run 2026-10-18, thin brief) · **Revamped:** 2026-10-19 into the calm band style
+
+## Revamp 2026-10-19: what changed
+The business hasn't been contacted, so the whole site was rebuilt under the new house default (`calm-photo-style.md`, copied from DPG's `index.html`). Facts, photos, the Facebook link and the estimate-form hand-off carried over; the look, structure and motion are new.
+- **Gone:** the marked-up concrete slab world: the canvas hero with the self-driving caulk gun you could drag, the saw-cut section dividers that filled with sealant, the concrete ground, layout-paint orange, the heavy uppercase system lettering. (All in git history at `dccb05d` if you want any of it back as an opt-in signature; see "Ideas not built".)
+- **New look:** off-white paper, twilight navy `#1d3f73` and deep navy `#0f2140` bands (the deep ones with the faint diagonal lines), caution-tape yellow `#ffd23f` as the one accent, used as a fill (navy text on it; `#7d5c00` when it must be text on light). Navy and yellow both come from their own job video: the dawn sky and the caution tape on the lot. Cal Sans headings, system body at 16/1.7, 24px cards, pill buttons.
+- **New hero:** their real lot (frame at 12.5s of the Facebook video: the new building, the slab and its joints) under a navy overlay, on phones and tablets. Eyebrow "Free estimates", H1 "Every joint sealed, day or night." bouncing in letter by letter, one promise line, two buttons (filled "Get a free estimate", outlined "Message us on Facebook").
+- **New motion:** the H1 bounce-in, one 12px fade-up for things below the first screen, and the floating circle. All three show content at once with reduced motion or no JS (checked in Chrome and WebKit).
+- **Structure now:** header (G&G wordmark, "Open 24/7" top right) → hero → Our work (4 stills, then the big "Click to see more of our work." Facebook row) → 24/7 band (night still, "We come when your lot is empty.") → How it works (3 steps, white band) → Get a free estimate (navy band, white form card) → footer.
+- **Contact wiring unchanged in substance, moved to `CONFIG`** at the top of the script (`PHONE`, `FB`, `NAME`, `FLOAT`). One line still turns the phone on everywhere.
 
 ## Contact gap: read this first
-- **No phone number exists anywhere.** The header's top-right corner, where the number belongs, shows "Open 24/7" for now, and the footer has no phone line. When Orlando gives a number, set `PHONE = '9735551234'` at the top of the `<script>` (one line). The header and footer then show a tap-to-call number, and the estimate form sends a pre-filled text message instead of the Facebook hand-off. I chose "Open 24/7" over a visible "Phone coming soon" so the page reads as finished; swap it back if you'd rather show the gap.
-- Until then the form builds the message, copies it (or lets them copy it by hand if the clipboard is blocked, as it can be in Facebook's in-app browser), and offers "Open Facebook to send it", which goes to Orlando's **personal** profile. Tapping that button copies the message again first, and the message is saved for the session, so coming Back from Facebook brings it back. **Messages from people who aren't his friends land in Facebook's Message Requests folder; make sure he checks it.** I didn't use an `m.me/<id>` Messenger link because I couldn't verify it works for personal profiles.
-- No email, so none appears on the page (the footer has no email line).
-
-## What's built
-- **World: the marked-up slab.** The page is a broom-finished concrete slab with saw-cut joints, orange layout-paint ticks, chalk-line blue for focus, and grey sealant beads. It comes straight from their job video: a new commercial lot, joints sealed at night and at sunrise.
-- **Signature:** the hero is a canvas slab. A caulk gun (with plunger rod and trigger) seals the joints by itself; the rod creeps forward as the slab fills. Drag a finger or move the mouse and it follows you, laying a bead into whichever joint you're over. Wet sealant runs along the joint and its sheen moves while it cures. Vertical drags work on phones (pull-to-refresh is off and the canvas position is read every frame). When the slab is fully sealed it rests 4s, then a fresh slab starts.
-- **Joints everywhere:** each section divider is a saw cut that fills with sealant when it scrolls into view and dimples under the pointer or finger. The gaps between the work photos are grey sealed joints.
-- **Sections:** header (G&G paint block plus name; "Open 24/7" top-right until there's a phone) → hero ("Every joint, sealed.", promise, "Get a free estimate" plus an outlined "Message us on Facebook") → Our work (4 stills from their video, then "Click to see more of our work." to Facebook) → Day or night, 24/7 (night still) → How it works (3 steps) → Get a free estimate (form on marking-orange) → footer (name, phone slot, Facebook).
-- Photos are WebP stills pulled from the Facebook group video (`yt-dlp`), embedded and loaded lazily. Page is ~330KB.
-- Tuning constants sit at the top of the script: joint spacing, nozzle rate, flow, auto speeds (phone 120, desktop 300 px/s), idle time before it runs by itself.
+- **No phone number exists anywhere.** Header top-right shows "Open 24/7" (plain text) until there is one. Set `CONFIG.PHONE = '9735551234'` and: the header shows a tap-to-call number, the footer adds it, the floating circle becomes a text circle (`sms:` with "Hi Orlando, I found your website. I need a free estimate for: "), and the form sends a pre-filled text instead of the Facebook hand-off. Tested with a dummy number: links and the encoded body decode correctly.
+- **Until then the floating circle goes to the estimate form** (label "Get a free estimate"), because an `sms:` link with no number goes nowhere. It still shows only after the hero and hides while the form is on screen.
+- The form writes the message, copies it (or lets them copy by hand if the clipboard is blocked in Facebook's in-app browser), and offers "Open Facebook to send it" to Orlando's **personal** profile. The message survives the round trip to Facebook (sessionStorage). **Messages from non-friends land in Message Requests; make sure he checks it.**
+- No email, so there's no footer email line.
 
 ## Assumptions I made
-- **The work is concrete joint sealing on commercial lots.** I inferred it from the video (saw-cut slab, sealant bucket, new commercial building). The caption only says "caulking". Confirm what else they do (windows, tubs, siding?) before adding a services list. I left services out on purpose (brief: don't invent).
-- **"We" voice,** because the caption says "We work 24/7".
-- **Copy I wrote that Orlando should confirm:** "Your lot can't close for a day while we work. So we come when it's empty: overnight, before you open, or on a weekend." and "We treat your property like our own: every joint filled clean, and the site left the way we found it." Both rest on the 24/7 claim and are written in the care voice Ellie wants, but they're my words, not his.
-- **Colors** come from the footage (concrete grey, caution/marking orange, twilight navy for the night section). There's no logo or brand.
-- **Service area** is left off the page. Essex County, NJ is inferred only from the referral group. The form asks for the town instead.
+- **The work is concrete joint sealing on commercial lots**, inferred from the video; the caption only says "caulking". No services list on the page.
+- **No place in the H1.** The calm style wants one, but the brief says area is unknown (Essex County, NJ is only inferred from the referral group). Once confirmed, try "Every joint sealed in Essex County, day or night." or similar.
+- **"We" voice** (the caption says "We work 24/7"). Lines that are my words, for Orlando to confirm: "fill every joint like it's on our own lot", "Your lot can't close for a day while we work. So we come overnight, before you open, or on a weekend.", "every joint filled clean, and the site left the way we found it."
+- **Colours** are inferred from the footage (no logo or brand).
+- **Wide screens (1024px+) get the plain textured navy hero.** The only hero-capable photo is a 720×960 still; filling a 1440px band blew it up 2× and cropped to a soft strip of building and the neighbour's trucks. Phones and tablets show the photo.
 
 ## Placeholders and gaps
-- Phone (header top-right, footer, form destination): missing; the header shows "Open 24/7" in its place.
-- No logo: the favicon, the home-screen icon (`apple-touch-icon.png`) and the header mark are an orange "G&G" lettering block.
-- Photos are video stills (720px wide). On desktop the grid is one row, so no still is shown past its native size at 1x, but they're soft on 2x/retina screens. Real photos would beat them, especially a before/after of a joint.
-- No reviews, prices, licensing or insurance (none published; don't claim).
-- The Facebook link goes to a personal profile whose cover photo is a couple's selfie. A G&G business page would be a much better destination.
+- Phone, email, service area, services list, logo: none.
+- Favicon and home-screen icon are the site's own lettering ("G&G", yellow on navy); no logo exists.
+- Photos are video stills (720px wide at best): sharp enough at phone 2x in the 2-column grid, a little soft on big retina screens.
+- No reviews, prices, licensing or insurance (none published; not claimed).
+- The Facebook link is a personal profile; a G&G business page would be a better destination.
 
 ## Questions for the owner
-1. A phone number, and whether it takes texts?
+1. A phone number, and does it take texts?
 2. Business email (footer only)?
 3. What do you seal besides concrete joints: windows, doors, tubs, siding, expansion joints, parking decks?
 4. Towns or counties you cover?
-5. Do you want a Facebook business page (or Messenger link) as the contact point?
-6. Before/after photos of a joint, and a photo of the crew or truck?
+5. A Facebook business page (or Messenger link) as the contact point?
+6. Before/after photos of a joint, a wide landscape photo of a finished lot (would fill the desktop hero), the crew or truck?
 7. Licensed and insured? Years in business?
 
 ## Ideas not built (yours to pick)
-- **Runner-up world: the floodlit night slab.** A twilight-navy hero with a light-tower pool on the concrete, caution tape, and the same sealing interaction. It leans harder on "24/7". The night section already hints at it.
-- Before/after slider of an open joint vs a sealed one once real photos exist.
-- A short muted clip of their video in the 24/7 section (the source is 30s, 720×1280, with unrelated music, so mute it).
-- Services list as short items with arrows, once confirmed (rows: arrow-only hover, per the finishing rules).
-- A caulk-gun trigger "click" squeeze on tap, and the sealant tooling smooth after it's laid.
-
-## Review status
-- Impeccable: every mode except `live` (critique, audit, harden, optimize, polish, layout, typeset, colorize, clarify, adapt, animate, delight, bolder, quieter, distill, overdrive) ran as three parallel reviews; their fixes are applied. The detector is clean (two suppressions in `.impeccable/config.json`: the system font stack, and padding on full-bleed sections). `onboard` and `extract` don't apply to a one-page site.
-- Finish reviewer, round 1 → fix (8 items). Round 2 verdict: 3 resolved; partial were the bead's look, the hero edge against the page ground, the seams sitting half-filled, the desktop grid's soft tall cell, and the dead desktop estimate column. I applied a last batch for all five (feathered, uneven bead; hero slab fades into the ground; seams fill in about a second and hold; one-row desktop grid; stacked estimate), but **no reviewer scored it**: the unattended budget is two rounds.
-- Worth your eye: whether the sealant bead reads as caulk at 1x, and how heavy the slab mottling is.
+- **Runner-up signature (opt-in): the slab you seal.** The previous build's canvas hero, a caulk gun sealing saw-cut joints that follows your finger (git `dccb05d`). Other worlds from the trade: a sealant bead laid along a section divider as you scroll; a floodlit night slab with caution tape; a before/after of an open vs a sealed joint.
+- **Desktop hero photo as a card:** on wide screens, show the 720×960 still at native size as a 24px card on the right half of the hero instead of the plain band. Not built because the calm rule says a photo that doesn't fit the wide band goes further down the page.
+- Before/after slider once real pairs exist.
+- A services section (rows with arrow circles on navy) once services are confirmed.
+- Atkinson Hyperlegible or similar is irrelevant here (the audience isn't 40+ by the brief), so no older-audience rules were applied.
 
 ## Not verified
-- Real-device touch (tested with simulated touch in headless Chrome: a vertical drag sealed the joint under it).
-- Clipboard and "Open Facebook" hand-off inside Facebook's in-app browser on iOS and Android.
-- Frame rate on older phones (the hero redraws the full slab each frame; the counts are modest but untested on hardware).
-- `sms:` flow (inactive until PHONE is set).
+- Real-device touch, the clipboard and "Open Facebook" hand-off inside Facebook's in-app browser on iOS and Android.
+- The real `sms:` hand-off on a phone (inactive until `PHONE` is set; tested in headless Chrome with a dummy number).
+
+## Review status (2026-10-19, revamp)
+- Impeccable detector run; critique, audit, harden, optimize, clarify, polish, layout, typeset, colorize, adapt, animate, delight, bolder, quieter, distill and overdrive ran as two read-only reviews, plus the finish reviewer (verdict: fix). Applied: the result heading was invisible (white on white), a yellow focus ring on the white card, the hero photo now loads right after the hero instead of after the whole file, copy without popping the keyboard, live region moved to the status line, the bounce waits up to 700ms for Cal Sans, the circle stays hidden once the message is written, one filled button after writing ("Update my message" goes outlined), no-JS form fallback, aria-required, landscape-phone hero, wide-screen hero shows the photo as a card on the right (both reviewers flagged the empty half; this is a judgment call against calm item 7's "use it further down the page", so check it), copy de-duplicated (eyebrows now "Caulking and joint sealing" and "Goes straight to Orlando").
+- Kept against Impeccable on purpose (Ellie's calm-style choices): eyebrow pills (craft floor bans them), the band texture (detector flags repeating stripes), the H1 bounce-in, the floating circle, Cal Sans.
+- Owner-voice lines to confirm with Orlando: "the site left the way we found it", "he gets back to you himself".
+
+## NOT FINISHED (usage limit hit mid-pass)
+- The last batch of fixes is pushed but **not re-screenshotted**: check 1024 and 1440 hero (promise and buttons should be on one line each), and 844×390 landscape.
+- `DESIGN.md` and `.impeccable/design.json` still describe the old slab world; run `impeccable:impeccable-documenter` to regenerate them, and clear the stale `design-system-*` ignores in `.impeccable/config.json`.
+- The revamp-done marker has not been touched.
